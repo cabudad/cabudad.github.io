@@ -9,33 +9,17 @@ $('.kfclosevid').click(function() {
 	$('.btnkfbx').addClass('on')
 })
 
-
-
-
-//弹窗
 const Dialog = defineconflict2();
 function TGDialogS(e) {
-        // 利用milo库引入dialog组件
-        // need("biz.dialog", function(Dialog) {
-        //         Dialog.show({
-        //                 id: e,
-        //                 bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
-        //                 opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
-        //         });
-        // });
-		Dialog.show({
-				id: e,
-				bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
-				opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
-		});
+	Dialog.show({
+			id: e,
+			bgcolor: '#000',
+			opacity: 50 
+	});
 }
 
 function closeDialog() {
-        // 利用milo库引入dialog组件
-        // need("biz.dialog", function(Dialog) {
-        //         Dialog.hide();
-        // });
-		Dialog.hide();
+	Dialog.hide();
 }
 
 
@@ -46,10 +30,6 @@ $('.listwish .btnchangeyw').click(function() {
     $(this).parent('.bxwhisrig').siblings('.boxfc').show();
 })
 
-
-
-
-// 提取共用的代码为一个函数
 function updateImagesAndText(element) {
     var img1 = element.children('img').attr('src');
     element.parent('.boxfc').siblings('.bxlfpic').children('img').attr('src', img1);
@@ -60,7 +40,6 @@ let thisClick;
 var flag = 0;
 var indeXuanz2 = false;
 var btnxuanz = $('.boxfc a');
-
 
 function IEVersion() {
         var userAgent = navigator.userAgent;
@@ -128,24 +107,9 @@ function IEVersion() {
             }
             location.href = '//act.daoju.qq.com'+location.pathname + window.location.search
         }
-    
     }
-    // browserRedirect();
-    
-    
 
-    // 页面，弹窗使用
     window.alert = function (msg, callback, callback1) {
-        // need("util.modalDialog", function (Dialog) {
-        //     Dialog.alert(msg, {
-        //         onConfirm: function () {
-        //             typeof callback == "function" ? callback() : console.log("no callback")
-        //         },
-        //         onClose: function () {
-        //             typeof callback1 == "function" ? callback1() : console.log("no callback1")
-        //         }
-        //     });
-        // })
 		const Dialog = defineconflict();
 		Dialog.alert(msg, {
 			onConfirm: function () {
@@ -158,19 +122,6 @@ function IEVersion() {
     };
     
     window.confirm = function (msg, callback, callback1, callback2) {
-        // need("util.modalDialog", function (Dialog) {
-        //     Dialog.confirm(msg, {
-        //         onConfirm: function () {
-        //             typeof callback == "function" ? callback() : console.log("no callback")
-        //         },
-        //         onCancel: function () {
-        //             typeof callback1 == "function" ? callback1() : console.log("no callback1")
-        //         },
-        //         onClose: function () {
-        //             typeof callback1 == "function" ? callback2() : console.log("no callback2")
-        //         }
-        //     });
-        // })
 		const Dialog = defineconflict();
 		Dialog.confirm(msg, {
 			onConfirm: function () {
@@ -215,9 +166,6 @@ function IEVersion() {
         return obj;
     }
     
-	
-	
-	
 	function defineconflict() {
 		var style =
 			'<style type="text/css">div.amsdialog_modal{border-radius:3px 3px 0px 0px;overflow:hidden}div.amsdialog_header{line-height:30px;color:#fff;background-color:#2196F3;padding:0px 5px;font-size:16px}a.amsdialog_close{float:right;color:#fff;text-decoration:none;cursor:pointer;font-size:24px}a.amsdialog_close:hover{color:red}.amsdialog_cmain{padding:5px;min-height:50px;font-size:14px;color:#000}div.amsdialog_footer{line-height:40px;text-align:right}div.amsdialog_footer a.amsdialog_btn{line-height:30px;display:inline-block;min-width:100px;text-align:center;text-decoration:none;color:#fff;border-radius:3px;margin:0px 5px}div.amsdialog_footer a.amsdialog_btn.amsdialog_bconfirm{background-color:#2096f3}div.amsdialog_footer a.amsdialog_btn.amsdialog_bconfirm:hover{background-color:#027bdc}div.amsdialog_footer a.amsdialog_btn.amsdialog_bcancel{background-color:#a7a6a4}div.amsdialog_footer a.amsdialog_btn.amsdialog_bcancel:hover{background-color:#908f8d}</style>';
