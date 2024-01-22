@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="TC" name="author" />
+		<meta content="TC" name="Copyright" />
+		<meta content="抽奖" name="Description">
+		<meta content="抽奖" name="Keywords">
+		<title>隼击长空幻灭神威</title>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="container">
+				<div class="head">
+					<div class="login_box">
+						<div id="logined" class="login">
+							欢迎您，<span>傻小子</span>
+							<a href="javascript:amsHistoryList(1);" style="color:#ffe957">【礼包记录】</a>
+							<a href="javascript:window.confirm('是否确定清除？',()=>{localStorage.removeItem('record_hs');window.alert('清除成功',()=>location.reload());},null,null);"
+								style="color:#f90000" title="清除统计数据">清除统计数据</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="content">
+					<div class="part1">
+						<h2 class="tit1 sp db">主奖池</h2>
+						<div class="btn_box1">
+							<a class="btn_gm1 sp" onclick="payClick(10);" style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+							<a class="btn_gm2 sp" onclick="payClick(100);"
+								style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+							<a class="btn_gm3 sp" onclick="payClick(10);" style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+						</div>
+						<div class="lotty1">
+							<a href="javascript:amsChou(1);" class="btn_cq1"></a>
+							<a href="javascript:amsChou(10);" class="btn_cq2"></a>
+							<a href="javascript:;" class="btn_dj2">共花费 : <span class="jf_6131" id="amountMN"
+									style="color:#ffe957;">XXX</span></a> -->
+							<a href="javascript:;" class="btn_dj3">剩余钥匙 : <span class="jf_6131" id="keyNumber"
+									style="color:#ffe957;">XXX</span></a> -->
+						</div>
+						<div class="box1">
+							<div class="box1ct1">
+								<p class="txt2">抽奖获得的可分解道具进入暂存箱<br />其余道具直接发往游戏内</p>
+								<a class="btn_dj4 sp" href="javascript:amsHistoryList(2);"><span></span></a>
+							</div>
+							<div class="box1ct2">
+								<div id="milo-broadcast" class="milo-broadcast"
+									style="width: 695px;position: relative;">
+									<ul id="milo-broadcast-container" style="width: 100%;position: absolute;">
+										<li>
+											恭喜玩家 傻小子 获得了：你
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：在
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：想
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：屁
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：吃
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：呢
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：屁
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：在
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：想
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：你
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：吃
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：呢
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="part2">
+						<h2 class="tit2 sp db">积分兑换</h2>
+						<p class="txt3">当前积分：<span class="jf_6134" id="integral" style="color:#ffe957;">xxx</span>
+						<ul class="box2">
+							<li>
+								<img src="static/picture/polc1.png" />
+								<a href="javascript:amsExchange(1);" class="btn_dh1 sp">888积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc2.png" />
+								<a href="javascript:amsExchange(2);" class="btn_dh1 sp">598积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc3.png" />
+								<a href="javascript:amsExchange(3);" class="btn_dh1 sp">548积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc4.png" />
+								<a href="javascript:amsExchange(4);" class="btn_dh1 sp">428积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc5.png" />
+								<a href="javascript:amsExchange(5);" class="btn_dh1 sp">298积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc6.png" />
+								<a href="javascript:amsExchange(6);" class="btn_dh1 sp">218积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc7.png" />
+								<a href="javascript:amsExchange(7);" class="btn_dh1 sp">218积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc8.png" />
+								<a href="javascript:amsExchange(8);" class="btn_dh1 sp">148积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc9.png" />
+								<a href="javascript:amsExchange(9);" class="btn_dh1 sp">58积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc10.png" />
+								<a href="javascript:amsExchange(10);" class="btn_dh1 sp">28积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc11.png" />
+								<a href="javascript:amsExchange(11);" class="btn_dh1 sp">8积分兑换</a>
+							</li>
+							<li>
+								<img src="static/picture/polc12.png" />
+								<a href="javascript:amsExchange(12);" class="btn_dh1 sp">2积分兑换</a>
+							</li>
+						</ul>
+					</div>
+					<div class="part5">
+						<h2 class="tit5 sp db">活动规则</h2>
+						<dl class="rule">
+							<dd class="c"><em class="sp">2</em>
+								<p>购买：10软妹币购买复活币x1，赠送抽奖钥匙x1，同时赠送幻灵卡x1；100软妹币购买复活币x10，赠送抽奖钥匙x11，同时赠送幻灵卡x10；
+								</p>
+							</dd>
+							<dd class="c"><em class="sp">3</em>
+								<p>抽奖：抽奖获得的可分解道具存放在【暂存箱】中，可选择分解成钥匙或发往游戏仓库，已经领取到仓库的道具无法退换，请慎重（在参与活动期间请确认好绑定的大区）；隼，灵狐者-职业经理为唯一性道具，可重复抽到/兑换，但在游戏仓库无法重复获得；
+								</p>
+							</dd>
+							<dd class="c"><em class="sp">4</em>
+								<p>兑换：获得的积分可以在兑换区兑换道具，兑换会消耗对应积分，兑换不限次数；隼，灵狐者-职业经理为唯一性道具，可重复抽到/兑换，但在游戏仓库无法重复获得；</p>
+							</dd>
+							<dd class="c"><em class="sp">9</em>
+								<p>概率公示：<a
+										href="javascript:TGDialogS('text14')">本活动概率公示</a>；活动概率会在公示概率的区间范围内进行波动，所用‘概率’均是在大样本(大量用户)下的统计数值，与单个玩家的少量测试数据之间可能会存在一定差异;
+								</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 暂存箱 -->
+		<div class="pop pop2" id="text2">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<div class="fc_box2">
+				<div class="fc_box2ct1">
+					<table class="table table_bor2">
+						<thead>
+							<tr>
+								<th style="width: 118px;">名称</th>
+								<th style="width: 127px;">领取道具</th>
+								<th>分解为钥匙</th>
+							</tr>
+						</thead>
+						<tbody id="getGiftContent2"></tbody>
+					</table>
+					<!-- 分页 -->
+					<div class="page_box milo-paginator">
+						<!-- <div class="my-page-prev my-page-forbid">&lt;</div> -->
+						<ul class="my-page-group" id="paginationList2">
+							<!-- Pagination items will be dynamically added here -->
+						</ul>
+						<!-- <div class="my-page-next my-page-forbid" style="display: none;">&gt;</div> -->
+					</div>
+				</div>
+				<div class="fc_box2ct2">
+					<p class="fc_txt1"><span>道具名称</span><span>分解所获钥匙</span></p>
+					<ul class="fc_box2ct2polc">
+						<li><p>隼</p><p>15</p></li>
+						<li><p>M200-幻神</p><p>12</p></li>
+						<li><p>王者风神（非觉醒版）</p><p>20</p></li>
+						<li><p>灵狐者-职业经理</p><p>10</p></li>
+						<li><p>Barrett-极光音效卡（不可交易）</p><p>8</p></li>
+						<li><p>炫金毁灭</p><p>6</p></li>
+						<li><p>M4A1-青龙</p><p>6</p></li>
+						<li><p>AK47-黑鲨</p><p>4</p></li>
+						<li><p>M200-幻神紫橙光效 （不可交易）</p><p>2</p></li>
+						<li><p>天使灵狐玩偶</p><p>1</p></li>
+					</ul>
+				</div>
+			</div>
+			<p class="fc_txt2">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持</p>
+		</div>
+		<!-- 礼包记录 -->
+		<div class="pop pop3" id="text3">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<div class="fc_box1">
+				<table class="table fctable_bor1">
+					<thead>
+						<tr>
+							<th class="th_5">时间</th>
+							<th class="th_6">大区</th>
+							<th>道具</th>
+						</tr>
+					</thead>
+					<tbody id="getGiftContent1"></tbody>
+				</table>
+				<div class="page_box milo-paginator">
+					<ul class="my-page-group" id="paginationList">
+						<!-- Pagination items will be dynamically added here -->
+					</ul>
+				</div>
+			</div>
+			<p class="fc_txt2">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持</p>
+		</div>
+		<!-- 中奖信息 十连-->
+		<div class="pop pop4" id="text4">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<p class="fc_txt3">抽奖过程请勿刷新页面或中断,请以实际礼包<br />记录为准。</p>
+			<ul class="fc_box3" id="showChouList"></ul>
+			<p class="fc_txt4">温馨提示:1.虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持。由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。</p>
+		</div>
+		<!-- 中奖信息 单抽-->
+		<div class="pop pop5" id="text5">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<p class="fc_txt3">抽奖过程请勿刷新页面或中断,请以实际礼包<br />记录为准。</p>
+			<div class="fc_box4">
+				<p class="showAlert"></p>
+			</div>
+			<p class="fc_txt4">温馨提示:1.虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持。由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。</p>
+		</div>
+		<!-- 是否确认领取 -->
+		<div class="pop pop8" id="text8">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<p class="fc_txt5">是否确认领取XXXX</p>
+			<div class="fc_btnbox2">
+				<a href="javascript:;" class="fcbtn_qr1 sp" onclick="PTTSendClick('btn','fcbtnqr1','确认领取')"></a>
+				<a href="javascript:;" class="fcbtn_qr2 sp" onclick="PTTSendClick('btn','fcbtnqr2','取消领取')"></a>
+			</div>
+		</div>
+		<!-- 是否确认分解 -->
+		<div class="pop pop8" id="text9">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+			<p class="fc_txt5">是否确认分解XXXX</p>
+			<div class="fc_btnbox2">
+				<a href="javascript:;" class="fcbtn_qr3 sp" onclick="PTTSendClick('btn','fcbtnqr3','确认')"></a>
+				<a href="javascript:;" class="fcbtn_qr4 sp" onclick="PTTSendClick('btn','fcbtnqr4','取消')"></a>
+			</div>
+		</div>
+		<!-- 概率公示 -->
+		<div class="pop pop11" id="text14">
+			<a href="javascript:closeDialog();" class="close_btn sp"></a>
+		</div>
+
+		<div id="mask"
+			style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;background: rgba(0, 0, 0, .4);">
+			<div id="payDialog" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%,-40%);">
+				<div class="midas_minipay_dialog_header">
+					<div class="header-icon-first" style="display: none;"><i
+							class="midas_minipay_dialog_icon midas_minipay_dialog_icon_i midas_minipay_dialog_icon_back"></i>&nbsp;
+					</div>
+					<div class="cp-header-title" style="line-height: 39px;">订单支付</div>
+				</div>
+				<div class="midas_minipay_dialog_content" style="padding-bottom:20px;background: #fff">
+					<div class="prop" style="padding-top: 25px;padding-bottom: 25px">
+						<div class="prop-detail">
+							<div class="prop-info">
+								<p class="prop-title">支付订单</p>
+								<!--ms-if-->
+								<p class="unit" style="display: none;">
+									单价：<span>0</span>元
+								</p>
+								<div></div>
+							</div>
+							<div class="prop-price">
+								<div><em id="amount">xxx</em>元</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-area" style="min-height:100px;" avalonctrl="channel">
+						<div class="pay-area-header" id="channelSelectWrap"
+							style="position: relative;*zoom:1;min-height: 60px;">
+							<h3 class="pay-title" style="margin-bottom: 10px;">
+								<span>支付方式：</span>
+							</h3>
+							<div class="channels">
+								<div class="channel checked">
+									<span>微信支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>QQ钱包</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>Q币支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel" data-track="channel">
+									<span>更多方式</span>
+									<i class="icon-more-arrow"></i>
+									<i class="icon-corner-checked"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right;margin-top: 80px;margin-right: 30px;">
+						<a class="btn btn-default" style="margin-right: 20px;" href="javascript:;"
+							onclick="confirmPay()">确认支付</a>
+						<a class="btn btn-danger" href="javascript:;" onclick="cancelPay()">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/milo.js"></script>
+	<script src="static/js/comm.js"></script>
+	<!-- //CryptoJS和aes库 -->
+	<script src="static/js/jdxbd.js"></script>
+	<script src="static/js/index.js"></script>
+</html>
