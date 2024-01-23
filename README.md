@@ -1,5 +1,3 @@
-#### 请牢记本导航域名地址
-
 <div align="center">
 	<div>
 		<a href="https://blog.sunguoqi.com/">
