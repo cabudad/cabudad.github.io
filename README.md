@@ -27,5 +27,7 @@
 
 
 ### 📃 Recent
-- [幻神](https://hdjxtc.github.io/lottery/hs/) &emsp; 📌 2024.1.12 00:00:00—2024.2.10 23:59:59；
-- [幸运星](https://hdjxtc.github.io/lottery/xyx/) &emsp; 📌 2024.1.23 00:00:00 —2024.2.29 23:59:59；
+- [枪娘](https://hdjxtc.github.io/lottery/qiang-niang/) &emsp; 📌 2024.1.2 00:00:00—2024.1.29 23:59:59；
+- [影豹](https://hdjxtc.github.io/lottery/huang-shen/) &emsp; 📌 2024.1.5 00:00:00—2024.2.29 23:59:59；
+- [幻神](https://hdjxtc.github.io/lottery/yingbao/) &emsp; 📌 2024.1.12 00:00:00—2024.2.10 23:59:59；
+- [幸运星](https://hdjxtc.github.io/lottery/xing-yun-xing/) &emsp; 📌 2024.1.23 00:00:00 —2024.2.29 23:59:59；
