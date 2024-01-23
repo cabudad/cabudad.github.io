@@ -23,6 +23,8 @@
 	</picture>
 </div>
 
+### 请牢记本导航
+
 ### 📃 Recent
 - [幻神](https://hdjxtc.github.io/lottery/hs/) &emsp; 📌 2024.1.12 00:00:00—2024.2.10 23:59:59；
-- [幸运星](https://hdjxtc.github.io/lottery/xyx/) &emsp; 📌 2024.1.23 00:00:00 —2024.2.29 23:59:59
+- [幸运星](https://hdjxtc.github.io/lottery/xyx/) &emsp; 📌 2024.1.23 00:00:00 —2024.2.29 23:59:59；
