@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="TC" name="author" />
+		<meta content="TC" name="Copyright" />
+		<meta content="抽奖" name="Description">
+		<meta content="抽奖" name="Keywords">
+		<title>枪娘暗刃抽奖</title>
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="container">
+				<div class="head">
+					<div class="boxlogina">
+						<div>
+							欢迎您，<span>傻小子</span>
+							<span id="spanBind" style="margin-right: 20px;">
+								<a href="javascript:amsHistoryList(1);">[礼包记录]</a>
+							</span>
+							<a href="javascript:window.confirm('是否确定清除？',()=>{localStorage.removeItem('record_qn');window.alert('清除成功',()=>location.reload());},null,null);" style="color:#f90000" title="清除统计数据">清除统计数据</a>
+						</div>
+					</div>
+					<span class="bgline"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrap1">
+			<div class="container">
+				<div class="box1">
+					<h2 class="tit1 sp db">枪娘抽奖</h2>
+					<div class="btnbox">
+						<a class="btnbuy1 sp" onclick="payClick(10);" style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+						<a class="btnbuy2 sp" onclick="payClick(100);" style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+						<a class="btnbuy3 sp" onclick="payClick(10);" style="cursor: pointer;"></a><!--添加类名on数字隐藏-->
+					</div>
+					<div class="boxlottery">
+						<ul class="listlot">
+							<li><img src="static/picture/lot1.png" alt="" />
+								<p class="lotname">觉醒版 QBZ-03-王者蔷薇</p>
+							</li>
+							<li><img src="static/picture/lot2.png" alt="" />
+								<p class="lotname">王者-春</p>
+							</li>
+							<li>
+								<img src="static/picture/lot3.png" alt="" />
+								<p class="lotname">星神-枪娘默 皮肤（不可交易）</p>
+								<span class="tagesbq tagesbq1 sp">全新首发</span>
+								<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+							</li>
+							<li>
+								<img src="static/picture/lot4.png" alt="" />
+								<p class="lotname">斯泰尔-枪娘暗刃</p>
+								<span class="tagesbq tagesbq1 sp">全新首发</span>
+								<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+							</li>
+							<li><img src="static/picture/lot5.png" alt="" />
+								<p class="lotname">毁灭耀金皮肤（不可交易）</p>
+							</li>
+							<li><img src="static/picture/lot6.png" alt="" />
+								<p class="lotname">积分x3</p>
+							</li>
+							<li><img src="static/picture/lot7.png" alt="" />
+								<p class="lotname">裁决-雪莉杨</p>
+							</li>
+							<li><img src="static/picture/lot8.png" alt="" />
+								<p class="lotname">积分x4</p>
+							</li>
+							<li><img src="static/picture/lot9.png" alt="" />
+								<p class="lotname">Barrett-极光</p>
+							</li>
+							<li><img src="static/picture/lot10.png" alt="" />
+								<p class="lotname">积分x6</p>
+							</li>
+							<li><img src="static/picture/lot11.png" alt="" />
+								<p class="lotname">M4A1-黑骑士</p>
+							</li>
+
+							<li><img src="static/picture/lot12.png" alt="" />
+								<p class="lotname">积分x12</p>
+							</li>
+							<li><img src="static/picture/lot13.png" alt="" />
+								<p class="lotname">积分x100</p>
+							</li>
+							<li><img src="static/picture/lot14.png" alt="" />
+								<p class="lotname">王者之石x1</p>
+							</li>
+							<li><img src="static/picture/lot15.png" alt="" />
+								<p class="lotname">天使灵狐玩偶（不可交易）</p>
+							</li>
+							<li>
+								<img src="static/picture/lot16.png" alt="" />
+								<p class="lotname">枪娘阿敏玩偶（不可交易）</p>
+								<span class="tagesbq tagesbq1 sp">全新首发</span>
+								<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+							</li>
+						</ul>
+						
+						<p class="lottxt2" style="font-size:30px;font-weight:bold;top: 400px;">共花费：<span class="jf_6048" id="amountMN">xxx</span></p>
+						<p class="lottxt2">剩余钥匙：<span class="jf_6048" id="keyNumber">xxx</span></p>
+						<div class="btnlotbx">
+							<a href="javascript:amsChou(1);" class="btnlot1 sp db">抽一次</a>
+							<a href="javascript:amsChou(10);" class="btnlot2 sp db">抽十次</a>
+						</div>
+					</div>
+					
+					<div class="boxzcmd">
+						<div class="boxzcmdin">
+							<div class="boxzcmdin_lf">
+								<h3 class="tita sp db">暂存箱</h3>
+								<a href="javascript:amsHistoryList(2);" class="btnzcx sp db">暂存箱</a>
+								<p class="txt_zcx">抽奖获得的可分解道具进入暂存箱, <br />其余道具直接发往游戏内</p>
+								<img src="static/picture/zcx.png" alt="" class="piczcx" />
+							</div>
+							<div class="boxzcmdin_mid sp"></div>
+							<div class="boxzcmdin_rig">
+								<h3 class="titb sp db"></h3>
+								<div class="boxzcrig" id="milo-broadcast" style="position: relative;">
+									<ul class="listmd" id="milo-broadcast-container" style="position: absolute;">
+										<li>
+											恭喜玩家 傻小子 获得了：你
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：在
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：想
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：屁
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：吃
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：呢
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：屁
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：在
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：想
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：你
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：吃
+										</li>
+										<li>
+											恭喜玩家 傻小子 获得了：呢
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="box2">
+					<h2 class="tit2 sp db">积分兑换</h2>
+					<p class="txtsyjf">剩余积分：<span class="jf_6049" id="integral">xxx</span></p>
+					<ul class="listdh">
+						<li>
+							<img src="static/picture/dhdj1.png" alt="" />
+							<p class="dhname">觉醒版 QBZ-03-王者蔷薇</p>
+							<a href="javascript:amsExchange(1);" class="btndhuanh sp">588积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj2.png" alt="" />
+							<p class="dhname">王者-春</p>
+							<a href="javascript:amsExchange(2);" class="btndhuanh sp">488积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj3.png" alt="" />
+							<p class="dhname">星神-枪娘默 皮肤（不可交易）</p>
+							<a href="javascript:amsExchange(3);" class="btndhuanh sp">488积分兑换</a>
+							<span class="tagesbq tagesbq1 sp">全新首发</span>
+							<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+						</li>
+						<li>
+							<img src="static/picture/dhdj4.png" alt="" />
+							<p class="dhname">斯泰尔-枪娘暗刃</p>
+							<a href="javascript:amsExchange(4);" class="btndhuanh sp">388积分兑换</a>
+							<span class="tagesbq tagesbq1 sp">全新首发</span>
+							<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+						</li>
+						<li>
+							<img src="static/picture/dhdj5.png" alt="" />
+							<p class="dhname">毁灭耀金皮肤（不可交易）</p>
+							<a href="javascript:amsExchange(5);" class="btndhuanh sp">288积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj6.png" alt="" />
+							<p class="dhname">裁决-雪莉杨</p>
+							<a href="javascript:amsExchange(6);" class="btndhuanh sp">288积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj7.png" alt="" />
+							<p class="dhname">Barrett-极光</p>
+							<a href="javascript:amsExchange(7);" class="btndhuanh sp">188积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj8.png" alt="" />
+							<p class="dhname">M4A1-黑骑士</p>
+							<a href="javascript:amsExchange(8);" class="btndhuanh sp">188积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj9.png" alt="" />
+							<p class="dhname">枪娘阿敏玩偶（不可交易）</p>
+							<a href="javascript:amsExchange(9);" class="btndhuanh sp">128积分兑换</a>
+							<span class="tagesbq tagesbq1 sp">全新首发</span>
+							<span class="tagesbq tagesbq2 sp">枪娘限定</span>
+						</li>
+						<li>
+							<img src="static/picture/dhdj10.png" alt="" />
+							<p class="dhname">天使灵狐玩偶（不可交易）</p>
+							<a href="javascript:amsExchange(10);" class="btndhuanh sp">88积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj11.png" alt="" />
+							<p class="dhname">属性变更券x5</p>
+							<a href="javascript:amsExchange(11);" class="btndhuanh sp">10积分兑换</a>
+						</li>
+						<li>
+							<img src="static/picture/dhdj12.png" alt="" />
+							<p class="dhname">交易专用钥匙x1</p>
+							<a href="javascript:amsExchange(12);" class="btndhuanh sp">4积分兑换</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box5">
+					<h2 class="tit5 sp db">活动规则</h2>
+					<ul class="listrule c">
+						<li>
+							<strong></strong>
+							<p>抽奖：消耗钥匙进行单抽和十连抽，抽奖获得的可分解道具存放在【暂存箱】中，可选择分解成钥匙或发往游戏仓库，已经领取到仓库的道具无法退换，请慎重（在参与活动期间请确认好绑定的大区）；唯一性道具和角色（如：王者-春）等，可重复抽到，但在同一大区内，游戏仓库无法重复到账；
+							</p>
+						</li>
+						<li>
+							<strong></strong>
+							<p>兑换：抽奖获得的积分可以在兑换区兑换道具，积分兑换道具不进暂存箱直接发往游戏内（唯一性道具王者-春，可重复兑换，但在同一大区内，游戏仓库无法重复到账，请谨慎操作）；</p>
+						</li>
+						<li>
+							<strong></strong>
+							<p><a href="javascript:TGDialogS('popgl');">本活动主奖池概率公示</a>；<!-- <a
+									href="javascript:TGDialogS('popgl1');"
+									onclick="PTTSendClick('btn','gl1','概率');">许愿池概率公示</a>； -->“概率”是在大样本（大量用户）下的统计数值，个体用户的少量数据之间存在一定差异。
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 礼包记录start -->
+		<div class="pop pop2" id="showMyGiftContent1">
+			<h3 class="poptit2 popsp db">礼包记录</h3>
+			<div class="table_con">
+				<table class="poptable1">
+					<thead>
+						<tr>
+							<th>获奖时间</th>
+							<th class="thhjsj">获奖大区</th>
+							<th>获奖礼包</th>
+						</tr>
+					</thead>
+					<tbody id="milo-lotteryRecordContainer1">
+					</tbody>
+				</table>
+				<!-- 分页 -->
+				<div class="page_box milo-paginator">
+					<!-- <div class="my-page-prev">&lt;</div> -->
+					<ul class="my-page-group" id="paginationList">
+						<!-- Pagination items will be dynamically added here -->
+					</ul>
+					<!-- <div class="my-page-next">&gt;</div> -->
+				</div>
+			</div>
+			<p class="poptxttip1">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持！</p>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!-- 礼包记录end -->
+
+
+		<!-- 暂存箱start -->
+		<div class="pop pop2 pop3" id="showMyGiftContent2">
+			<div class="dia-con-1 c">
+				<div class="dia-con-a">
+					<h3 class="pop_tit_zc popsp db poptitmid">暂存箱</h3>
+					<div class="bgtable1">
+						<table class="poptable2">
+							<thead>
+								<tr>
+									<th class="wd118">名称</th>
+									<th class="wd126" style="white-space: nowrap;">领取道具</th>
+									<th class="wd124" style="white-space: nowrap;">分解钥匙</th>
+								</tr>
+							</thead>
+							<tbody id="milo-lotteryRecordContainer2">
+							</tbody>
+						</table>
+					</div>
+					<!-- 分页 -->
+					<div class="page_box milo-paginator">
+						<!-- <div class="my-page-prev my-page-forbid">&lt;</div> -->
+						<ul class="my-page-group" id="paginationList2">
+							<!-- Pagination items will be dynamically added here -->
+						</ul>
+						<!-- <div class="my-page-next my-page-forbid" style="display: none;">&gt;</div> -->
+					</div>
+				</div>
+				<div class="dia-con-b">
+					<h3 class="pop_tit_wqfj popsp db">武器分解表</h3>
+					<div class="poptable3">
+						<h4><span>道具名称</span><span>分解所获钥匙</span></h4>
+						<div class="table_con2">
+							<p><span>觉醒版 QBZ-03-王者蔷薇</span><span>12</span></p>
+							<p><span>王者-春</span><span>10</span></p>
+							<p><span>星神-枪娘默 皮肤（不可交易）</span><span>10</span></p>
+							<p><span>斯泰尔-枪娘暗刃</span><span>8</span></p>
+							<p><span>毁灭耀金皮肤（不可交易）</span><span>6</span></p>
+							<p><span>裁决-雪莉杨</span><span>6</span></p>
+							<p><span>Barrett-极光</span><span>4</span></p>
+							<p><span>M4A1-黑骑士</span><span>4</span></p>
+							<p><span>枪娘阿敏玩偶（不可交易）</span><span>3</span></p>
+							<p><span>天使灵狐玩偶（不可交易）</span><span>2</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="poptxttip1">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持！</p>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!-- 暂存箱start -->
+
+		<!--中奖记录start 10连 start-->
+		<div class="pop pop6" id="popJl">
+			<h2 class="pop_tit4 popsp db">中奖信息</h2>
+			<p class="p_tips">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<div class="zj_info" id="choulist">
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+			</div>
+			<p class="poplottxt">
+				1.虚拟道具奖品将在24小时内发到游戏仓库；<br />
+				2.可分解奖品将发到暂存箱进行领取或分解；<br />
+				3.积分在本页面查看；<br />
+				4.由于数据量巨大，奖品道具显示将有所延迟，或可存在不展示情况，请以礼包记录为准，谢谢您的理解与支持。
+			</p>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--中奖记录start 10连 end-->
+
+		<!--中奖记录start 单抽 start-->
+		<div class="pop pop4" id="popdc">
+			<h2 class="pop_tit4 popsp db">中奖信息</h2>
+			<p class="p_tips">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<div class="zj_info pop_list">
+				<p id="jlname">xxxxxxxxxxxxxxxxx</p>
+			</div>
+			<p class="poplottxt">
+				1.虚拟道具奖品将在24小时内发到游戏仓库；<br />
+				2.可分解奖品将发到暂存箱进行领取或分解；<br />
+				3.积分在本页面查看；<br />
+				4.由于数据量巨大，奖品道具显示将有所延迟，或可存在不展示情况，请以礼包记录为准，谢谢您的理解与支持。
+			</p>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--中奖记录start 单抽 start-->
+
+
+		<!--奖池概率-->
+		<div class="pop pop5" id="popgl">
+			<h2 class="poptitgl popsp db">概率信息</h2>
+			<div class="popgltable">
+				<table class="tablegail">
+					<tr>
+						<th>道具名称</th>
+						<th>概率</th>
+					</tr>
+					<tr>
+						<td>觉醒版 QBZ-03-王者蔷薇</td>
+						<td>0.20%</td>
+					</tr>
+					<tr>
+						<td>王者-春</td>
+						<td>0.25%</td>
+					</tr>
+					<tr>
+						<td>星神-枪娘默 皮肤（不可交易）</td>
+						<td>0.25%</td>
+					</tr>
+					<tr>
+						<td>斯泰尔-枪娘暗刃</td>
+						<td>0.30%</td>
+					</tr>
+					<tr>
+						<td>毁灭耀金皮肤（不可交易）</td>
+						<td>0.40%</td>
+					</tr>
+					<tr>
+						<td>裁决-雪莉杨</td>
+						<td>0.40%</td>
+					</tr>
+					<tr>
+						<td>Barrett-极光</td>
+						<td>0.60%</td>
+					</tr>
+					<tr>
+						<td>M4A1-黑骑士</td>
+						<td>0.60%</td>
+					</tr>
+					<tr>
+						<td>枪娘阿敏玩偶（不可交易）</td>
+						<td>0.80%</td>
+					</tr>
+					<tr>
+						<td>天使灵狐玩偶（不可交易）</td>
+						<td>1.20%</td>
+					</tr>
+					<tr>
+						<td>王者之石x1</td>
+						<td>4.90%</td>
+					</tr>
+					<tr>
+						<td>积分*100</td>
+						<td>0.10%</td>
+					</tr>
+					<tr>
+						<td>积分*12</td>
+						<td>5.00%</td>
+					</tr>
+					<tr>
+						<td>积分*6</td>
+						<td>15.00%</td>
+					</tr>
+					<tr>
+						<td>积分*4</td>
+						<td>30.00%</td>
+					</tr>
+					<tr>
+						<td>积分*3</td>
+						<td>40.00%</td>
+					</tr>
+				</table>
+			</div>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--奖池概率-->
+
+
+
+		<!--许愿池概率-->
+		<div class="pop pop2 pop9" id="popgl1">
+			<h2 class="poptitgl popsp db">概率信息</h2>
+			<div class="popgltable">
+				<table class="tablegail">
+					<tr>
+						<th>道具名称</th>
+						<th>概率</th>
+					</tr>
+					<tr>
+						<td>许愿值50</td>
+						<td>0.20%</td>
+					</tr>
+					<tr>
+						<td>许愿值20</td>
+						<td>0.60%</td>
+					</tr>
+					<tr>
+						<td>许愿值10</td>
+						<td>1.20%</td>
+					</tr>
+					<tr>
+						<td>许愿值5</td>
+						<td>3.00%</td>
+					</tr>
+					<tr>
+						<td>许愿值2</td>
+						<td>35.00%</td>
+					</tr>
+					<tr>
+						<td>许愿值1</td>
+						<td>60.00%</td>
+					</tr>
+				</table>
+			</div>
+			<a class="dia-close db popsp" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--许愿池概率-->
+
+
+		<div id="mask" style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;background: rgba(0, 0, 0, .4);">
+			<div id="payDialog" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%,-40%);">
+				<div class="midas_minipay_dialog_header">
+					<div class="header-icon-first" style="display: none;"><i
+							class="midas_minipay_dialog_icon midas_minipay_dialog_icon_i midas_minipay_dialog_icon_back"></i>&nbsp;
+					</div>
+					<div class="cp-header-title" style="line-height: 39px;">订单支付</div>
+				</div>
+				<div class="midas_minipay_dialog_content" style="padding-bottom:20px;background: #fff">
+					<div class="prop" style="padding-top: 25px;padding-bottom: 25px">
+						<div class="prop-detail">
+							<div class="prop-info">
+								<p class="prop-title">支付订单</p>
+								<!--ms-if-->
+								<p class="unit" style="display: none;">
+									单价：<span>0</span>元
+								</p>
+								<div></div>
+							</div>
+							<div class="prop-price">
+								<div><em id="amount">xxx</em>元</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-area" style="min-height:100px;" avalonctrl="channel">
+						<div class="pay-area-header" id="channelSelectWrap"
+							style="position: relative;*zoom:1;min-height: 60px;">
+							<h3 class="pay-title" style="margin-bottom: 10px;">
+								<span>支付方式：</span>
+							</h3>
+							<div class="channels">
+								<div class="channel checked">
+									<span>微信支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>QQ钱包</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>Q币支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel" data-track="channel">
+									<span>更多方式</span>
+									<i class="icon-more-arrow"></i>
+									<i class="icon-corner-checked"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right;margin-top: 80px;margin-right: 30px;">
+						<a class="btn btn-default" style="margin-right: 20px;" href="javascript:;" onclick="confirmPay()">确认支付</a>
+						<a class="btn btn-danger" href="javascript:;" onclick="cancelPay()">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/milo.js"></script>
+	<script src="static/js/comm.js"></script>
+	<script src="static/js/index.js"></script>
+</html>
