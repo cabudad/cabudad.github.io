@@ -1,3 +1,5 @@
+### 请牢记本地址
+
 <div align="center">
 	<div>
 		<a href="https://blog.sunguoqi.com/">
@@ -23,7 +25,6 @@
 	</picture>
 </div>
 
-### 请牢记本导航
 
 ### 📃 Recent
 - [幻神](https://hdjxtc.github.io/lottery/hs/) &emsp; 📌 2024.1.12 00:00:00—2024.2.10 23:59:59；
