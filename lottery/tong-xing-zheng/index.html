@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="Tencent-CP" name="author" />
+		<meta content="Tencent" name="Copyright" />
+		<meta content="模拟器" name="Description">
+		<meta content="模拟器" name="Keywords">
+		<title>S23赛事通行证</title>
+		<link rel="icon" href="https://hdjxtc.github.io/static/favicon.ico" type="image/x-icon">
+		<link href="static/css/index.css" rel="stylesheet">
+		<link href="static/css/swiper-bundle.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="g-wrap">
+			<div class="backround">
+				<div class="head"></div>
+				<div class="content">
+					<div class="marginLine"></div>
+					<div class="front"></div>
+					<div class="login-text">
+						<div class="login" id="logined">
+							欢迎您，<span id="userinfo">傻小子</span>
+							<span id="spanBind">
+								<a href="javascript:amsHistoryList(1);">【礼包记录】</a>
+							</span>
+							<a href="javascript:window.confirm('是否确定清除？',()=>{localStorage.removeItem('record_tongXingZheng');window.alert('清除成功',()=>location.reload());},null,null);"
+								style="color:#f90000" title="清除统计数据">清除统计数据</a>
+						</div>
+					</div>
+					<div class="part1">
+						<div class="marginLine"></div>
+						<div class="p1-title"></div>
+						<div class="p1-line1">
+							<a class="p1-l1-btn1" href="javascript:payClick(10);"></a>
+							<a class="p1-l1-btn2" href="javascript:payClick(100);"></a>
+							<a class="p1-l1-btn3" href="javascript:payClick(10);"></a>
+						</div>
+						<div class="p1-l1-text"><a href="javascript:void(0);"></a></div>
+						<div class="p1-line2">
+							<div class="lottery" id="lotterycontent">
+								<img alt='奖品' height="688px" src="static/picture/p1-l2-item.png" width="1280px">
+							</div>
+							<div class="text">
+								<div class="t1">剩余钥匙:<span class="jf_6146" id="keyNumber">x</span></div>
+								<div class="t2">共花费:<span class="jf_2327" id="amountMN"
+										style="color:#f90000;font-weight: 600;">x</span></div>
+							</div>
+							<div class="btn10x1">
+								<a href="javascript:TGDialogS('popSelect10');"></a>
+							</div>
+							<a class="p1-l2-btn1" href="javascript:amsChou(1);"></a>
+							<a class="p1-l2-btn2" href="javascript:amsChou(10);"></a>
+							<div class="tb">图标任选剩余次数：<span class="jf_6150" id="optionNumber">X</span></div>
+						</div>
+						<div class="p1-line3">
+							<div class="left">
+								<div class="p1-l3-text">1.分解道具获得钥匙<br />2.将暂存箱道具发往游戏内仓库
+								</div>
+								<div class="p1-l3-item-bg"></div>
+								<a class="p1-l3-btn" href="javascript:amsHistoryList(2)"></a>
+							</div>
+							<div class="right">
+								<div class="p1-l3-text-bg">
+									<div class="marquee">
+										<div id="milo-broadcast" style="position: relative;">
+											<ul class="p1-marquee" id="milo-broadcast-container"
+												style="position: absolute;text-align: center;">
+												<li>
+													恭喜玩家 傻小子 获得了：你
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：在
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：想
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：屁
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：吃
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：呢
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：屁
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：在
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：想
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：你
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：吃
+												</li>
+												<li>
+													恭喜玩家 傻小子 获得了：呢
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="part2">
+						<div class="marginLine"></div>
+						<div class="p2-title"></div>
+						<div class="p2-text">
+							本活动中通过抽奖获得一定次数的冠军系列道具可直接领取相应福利（单q单大区限领取1次），累计次数不包含福利获得和兑换的部分。<span>【抽中冠军系列道具累计次数：<span
+									class="chou_sum" id="rare_sum">x</span>】</span></div>
+						<div class="p2-item">
+							<div class="p2-i-g">
+								<div class="p2-item-bg">
+									<div class="p2-tips-13"></div>
+									<div class="p2-item-13 po"></div>
+									<div class="text">幻神-巅峰荣耀 皮肤 兑换券</div>
+								</div>
+								<a class="p2-btn ljdh ljdh5" href="javascript:amsLqSum(12);"></a>
+							</div>
+							<div class="p2-i-g">
+								<div class="p2-item-bg">
+									<div class="p2-tips-8"></div>
+									<div class="p2-item-8 po"></div>
+									<div class="text">毁灭-荣耀之怒 皮肤 兑换券</div>
+								</div>
+								<a class="p2-btn ljdh ljdh4" href="javascript:amsLqSum(8);"></a>
+							</div>
+							<div class="p2-i-g">
+								<div class="p2-item-bg">
+									<div class="p2-tips-5"></div>
+									<div class="p2-item-5 po"></div>
+									<div class="text">Knife-冠军之刃</div>
+								</div>
+								<a class="p2-btn ljdh ljdh3" href="javascript:amsLqSum(5);"></a>
+							</div>
+							<div class="p2-i-g">
+								<div class="p2-item-bg">
+									<div class="p2-tips-3"></div>
+									<div class="p2-item-3 po"></div>
+									<div class="text">黑骑士-AG-S4冠军典藏皮肤</div>
+								</div>
+								<a class="p2-btn ljdh ljdh2" href="javascript:amsLqSum(3);"></a>
+							</div>
+							<div class="p2-i-g">
+								<div class="p2-item-bg">
+									<div class="p2-tips-2"></div>
+									<div class="p2-item-2 po"></div>
+									<div class="text">CFPL-S19赛季荣耀之证</div>
+								</div>
+								<a class="p2-btn ljdh ljdh1" href="javascript:amsLqSum(1);"></a>
+							</div>
+						</div>
+					</div>
+					<div class="part3">
+						<div class="marginLine"></div>
+						<div class="p3-title"></div>
+						<div class="p3-line1">
+							<div class="p3-lv-bg level" id="level">x</div>
+							<div class="p3-l1-g2">
+								<div class="p3-l1-text">
+									<span class="text1">徽章等级</span>
+									<span class="text2">经验值：<span class="progress_num" id="integral">x</span>/100<span
+											style="color: red">【徽章令等级无上限】</span></span>
+								</div>
+								<!-- 	<a class="p3-l1-btn1" href="javascript:amsHistoryList(1);"></a>
+								<a class="p3-l1-btn2 jump-task"></a> -->
+								<div class="p3-line-empty">
+									<div class="p3-line progress_width" style="width: 0%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="p3-line2">
+							<div class="left">
+								<div class="p3-l2-top"></div>
+								<div class="p3-l2-btm"></div>
+							</div>
+							<div class="middle">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper" id="bp_list" aria-live="polite">
+										<div class="swiper-slide swiper-slide-active" order="1" bp_lv="1"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="1 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">1级</div>
+												<div class="item p3-item-1"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">1级</div>
+												<div class="item btm p3-item-btm-1"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-slide-next" order="2" bp_lv="2"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="2 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">2级</div>
+												<div class="item p3-item-2"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">2级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="3" bp_lv="3"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="3 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">3级</div>
+												<div class="item p3-item-3"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">3级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="4" bp_lv="4"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="4 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">4级</div>
+												<div class="item p3-item-4"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">4级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="5" bp_lv="5"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="5 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">5级</div>
+												<div class="item p3-item-5"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">5级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="6" bp_lv="6"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="6 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">6级</div>
+												<div class="item p3-item-6"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">6级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="7" bp_lv="7"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="7 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">7级</div>
+												<div class="item p3-item-7"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">7级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="8" bp_lv="8"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="8 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">8级</div>
+												<div class="item p3-item-8"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">8级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="9" bp_lv="9"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="9 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">9级</div>
+												<div class="item p3-item-9"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">9级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="10" bp_lv="10"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="10 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">10级</div>
+												<div class="item p3-item-10"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">10级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="11" bp_lv="11"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="11 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">11级</div>
+												<div class="item p3-item-11"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">11级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="12" bp_lv="12"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="12 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">12级</div>
+												<div class="item p3-item-12"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">12级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="13" bp_lv="13"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="13 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">13级</div>
+												<div class="item p3-item-13"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">13级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="14" bp_lv="14"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="14 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">14级</div>
+												<div class="item p3-item-14"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">14级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="15" bp_lv="15"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="15 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">15级</div>
+												<div class="item p3-item-15"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">15级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="16" bp_lv="16"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="16 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">16级</div>
+												<div class="item p3-item-16"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">16级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="17" bp_lv="17"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="17 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">17级</div>
+												<div class="item p3-item-17"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">17级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="18" bp_lv="18"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="18 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">18级</div>
+												<div class="item p3-item-18"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">18级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="19" bp_lv="19"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="19 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">19级</div>
+												<div class="item p3-item-19"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">19级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="20" bp_lv="20"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="20 / 100">
+											<div class="p3-l2-item-bg bp_list1">
+												<div class="marginLine"></div>
+												<div class="lv-text">20级</div>
+												<div class="item p3-item-20"></div>
+												<a href="javascript:;" class="p3-l2-btn"></a>
+											</div>
+
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">20级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="21" bp_lv="21"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="21 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">21级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="22" bp_lv="22"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="22 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">22级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="23" bp_lv="23"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="23 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">23级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="24" bp_lv="24"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="24 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">24级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="25" bp_lv="25"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="25 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">25级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="26" bp_lv="26"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="26 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">26级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="27" bp_lv="27"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="27 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">27级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="28" bp_lv="28"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="28 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">28级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="29" bp_lv="29"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="29 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">29级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="30" bp_lv="30"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="30 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">30级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="31" bp_lv="31"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="31 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">31级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="32" bp_lv="32"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="32 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">32级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="33" bp_lv="33"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="33 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">33级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="34" bp_lv="34"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="34 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">34级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="35" bp_lv="35"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="35 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">35级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="36" bp_lv="36"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="36 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">36级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="37" bp_lv="37"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="37 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">37级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="38" bp_lv="38"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="38 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">38级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="39" bp_lv="39"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="39 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">39级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="40" bp_lv="40"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="40 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">40级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="41" bp_lv="41"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="41 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">41级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="42" bp_lv="42"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="42 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">42级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="43" bp_lv="43"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="43 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">43级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="44" bp_lv="44"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="44 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">44级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="45" bp_lv="45"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="45 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">45级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="46" bp_lv="46"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="46 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">46级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="47" bp_lv="47"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="47 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">47级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="48" bp_lv="48"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="48 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">48级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="49" bp_lv="49"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="49 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">49级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="50" bp_lv="50"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="50 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">50级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="51" bp_lv="51"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="51 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">51级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="52" bp_lv="52"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="52 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">52级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="53" bp_lv="53"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="53 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">53级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="54" bp_lv="54"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="54 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">54级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="55" bp_lv="55"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="55 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">55级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="56" bp_lv="56"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="56 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">56级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="57" bp_lv="57"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="57 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">57级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="58" bp_lv="58"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="58 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">58级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="59" bp_lv="59"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="59 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">59级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="60" bp_lv="60"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="60 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">60级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="61" bp_lv="61"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="61 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">61级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="62" bp_lv="62"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="62 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">62级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="63" bp_lv="63"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="63 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">63级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="64" bp_lv="64"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="64 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">64级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="65" bp_lv="65"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="65 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">65级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="66" bp_lv="66"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="66 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">66级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="67" bp_lv="67"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="67 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">67级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="68" bp_lv="68"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="68 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">68级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="69" bp_lv="69"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="69 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">69级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="70" bp_lv="70"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="70 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">70级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="71" bp_lv="71"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="71 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">71级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="72" bp_lv="72"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="72 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">72级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="73" bp_lv="73"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="73 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">73级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="74" bp_lv="74"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="74 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">74级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="75" bp_lv="75"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="75 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">75级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="76" bp_lv="76"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="76 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">76级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="77" bp_lv="77"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="77 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">77级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="78" bp_lv="78"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="78 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">78级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="79" bp_lv="79"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="79 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">79级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="80" bp_lv="80"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="80 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">80级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="81" bp_lv="81"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="81 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">81级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="82" bp_lv="82"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="82 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">82级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="83" bp_lv="83"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="83 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">83级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="84" bp_lv="84"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="84 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">84级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="85" bp_lv="85"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="85 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">85级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="86" bp_lv="86"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="86 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">86级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="87" bp_lv="87"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="87 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">87级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="88" bp_lv="88"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="88 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">88级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="89" bp_lv="89"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="89 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">89级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="90" bp_lv="90"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="90 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">90级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="91" bp_lv="91"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="91 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">91级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="92" bp_lv="92"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="92 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">92级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="93" bp_lv="93"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="93 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">93级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="94" bp_lv="94"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="94 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">94级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="95" bp_lv="95"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="95 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">95级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="96" bp_lv="96"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="96 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">96级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="97" bp_lv="97"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="97 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">97级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="98" bp_lv="98"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="98 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">98级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="99" bp_lv="99"
+											style="width: 108px; margin-right: 1px;" role="group" aria-label="99 / 100">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">99级</div>
+												<div class="item btm p3-item-btm-2"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+										<div class="swiper-slide" order="100" bp_lv="100" role="group"
+											aria-label="100 / 100" style="width: 108px; margin-right: 1px;">
+											<div class="p3-l2-item-bg bp_list1 nobg"></div>
+											<div class="p3-l2-item-bg bp_list2">
+												<div class="marginLine"></div>
+												<div class="lv-text">100级</div>
+												<div class="item btm p3-item-btm-4"></div>
+												<a href="javascript:alert('请使用一键领取~', null, null);" class="p3-l2-btn"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="p3-next"></div>
+								<div class="p3-prev"></div>
+							</div>
+							<div class="right">
+								<div class="p3-l2-item-bg-sp">
+									<div class="marginLine"></div>
+									<div class="lv-text">20级可领取</div>
+									<div class="item p3-item-20"></div>
+								</div>
+								<div class="p3-l2-item-bg-sp r2">
+									<div class="marginLine"></div>
+									<div class="lv-text">1000级可领取</div>
+									<div class="item p3-item-1000"></div>
+								</div>
+							</div>
+						</div>
+						<div class="p3-line3">
+							<a class="p3-l3-btn1" href="javascript:;"></a>
+							<a class="p3-l3-btn2" href="javascript:getPropByBatch();""></a>
+					    </div>
+					    <div class=" p3-l3-text">
+								<div class="text">
+									点击可领取当前可领所有奖励
+								</div>
+								<div class="text2">
+									解锁可获得抽奖钥匙x1
+								</div>
+						</div>
+					</div>
+					<div class="part4">
+						<div class="marginLine"></div>
+						<div class="p4-title"></div>
+						<div class="p4-l1-text">我的徽章令：<span class="jf_3782"
+								id="badgeNum">x</span>【<span>单Q单大区兑换限1</span>】</div>
+						<div class="p4-line1">
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-1"></div>
+									<div class="text">幻神-冠军之幻</div>
+									<div class="qxsf"></div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh3" href="javascript:amsExchange(3);"><span
+										class="wdh">12800徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-2"></div>
+									<div class="text">M4A1-雷神-巅峰荣耀皮肤</div>
+									<div class="qxsf"></div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh1" href="javascript:amsExchange(1);"><span
+										class="wdh">10800徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-3"></div>
+									<div class="text">QBZ03-巅峰荣耀</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh2" href="javascript:amsExchange(2);"><span
+										class="wdh">10800徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="po p4-item-5"></div>
+									<div class="text">Knife-冠军之刃</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh9" href="javascript:amsExchange(9);"><span
+										class="wdh">8880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+						</div>
+						<div class="p4-line2 p4-line1">
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-6"></div>
+									<div class="text">黑龙-冠军之武</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh4" href="javascript:amsExchange(4);"><span
+										class="wdh">5880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="po p4-item-7"></div>
+									<div class="text">迷你深渊冰龙-王绿豆</div>
+									<div class="qxsf"></div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh6" href="javascript:amsExchange(6);"><span
+										class="wdh">5880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-8"></div>
+									<div class="text">龙啸-冠军之啸</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh5" href="javascript:amsExchange(5);"><span
+										class="wdh">3880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="p4-tips"></div>
+									<div class="po p4-item-9"></div>
+									<div class="text">雷神-R.LGD-<br />CFPLS18冠军</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh7" href="javascript:amsExchange(7);"><span
+										class="wdh">2880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="po p4-item-10"></div>
+									<div class="text">毁灭-孙三炮</div>
+								</div>
+								<a class="p4-btn-bg hzldh hzldh8" href="javascript:amsExchange(8);"><span
+										class="wdh">1680徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+							<div class="p4-l1-g">
+								<div class="p4-item-bg">
+									<div class="po p4-item-11"></div>
+									<div class="text">十支战队击杀图标任选</div>
+								</div>
+								<a class="p4-btn-bg hzldhselect" href="javascript:TGDialogS('popExchange10')"><span
+										class="wdh">880徽章令兑换</span><span class="dhed">已领取</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="part6 part5">
+						<div class="marginLine"></div>
+						<div class="p6-title"></div>
+						<ul class="listrule c">
+							<li>
+								<strong></strong>
+								<p>
+									<span class="num-bg"></span>时间<br />
+									活动时间：2024.1.26 00:00:00—2024.4.30 23:59:59；<br />
+								</p>
+							</li>
+							<li>
+								<strong></strong>
+								<p>
+									<span
+										class="num-bg"></span>抽奖：消耗钥匙进行单抽和十连抽，抽奖获得的可分解道具存放在【暂存箱】中，可选择分解成钥匙或发往游戏仓库，已经领取到仓库的道具无法退换，请慎重（在参与活动期间请确认好绑定的大区）；唯一性道具和角色（如：职业选手等），可重复抽到，但在同一大区内，游戏仓库无法重复到账；
+								</p>
+							</li>
+							<li>
+								<strong></strong>
+								<p>
+									<span class="num-bg"></span>冠军累计福利<br />
+									本活动中通过抽奖获得一定次数的冠军系列道具（M4A1-雷神-巅峰荣耀皮肤，QBZ03-巅峰荣耀，幻神-冠军之幻，黑龙-冠军之武，龙啸-冠军之啸）可直接领取相应福利，累计次数不包含福利获得和兑换的部分，活动期间单q单大区限领取1次；
+								</p>
+							</li>
+							<li>
+								<strong></strong>
+								<p>
+									<span class="num-bg"></span>通行证<br />
+									通过经验值的累计可以增加等级，每获得100经验值升一级，经验值可以通过完成任务获得，也可通过参加其他运营活动获得经验值，通行证每升一级均可以获得对应的奖励；通行证等级不设上限，1000级后每级可获得40徽章令；
+								</p>
+							</li>
+							<li>
+								<strong></strong>
+								<p>
+									<span class="num-bg"></span>概率公示：<a href="javascript:TGDialogS('pop-gl');"
+										style="color: #ee8686">本活动抽奖概率公示</a>。所用‘概率’均是在大样本(大量用户)下的统计数值，与单个玩家的少量测试数据之间可能会存在一定差异；
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 获奖记录start -->
+		<div class="alert3 alert3-bg" id="showMyGiftContent1">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog()"></a>
+			<div class="table">
+				<table>
+					<thead>
+						<tr style="height: 34px;">
+							<td style="width: 264px;">获奖时间</td>
+							<td style="width: 158px;border-left: #fff solid 1px;border-right: #fff solid 1px;">获奖大区</td>
+							<td style="width: 258px;">获奖礼包</td>
+						</tr>
+					</thead>
+					<tbody id="milo-lotteryRecordContainer1">
+					</tbody>
+				</table>
+				<!-- 分页 -->
+				<div class="t1-pagenation milo-paginator">
+					<!-- <div class="my-page-prev">&lt;</div> -->
+					<ul class="my-page-group" id="paginationList">
+						<!-- Pagination items will be dynamically added here -->
+					</ul>
+					<!-- <div class="my-page-next">&gt;</div> -->
+				</div>
+				<div class="alert3-listbtm"></div>
+			</div>
+			<div class="btm-text">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持！</div>
+		</div>
+		<!-- 获奖记录end -->
+
+
+		<!-- 暂存箱start -->
+		<div class="alert alert-zcbox" id="showMyGiftContent2">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog()"></a>
+			<div class="table table1">
+				<table>
+					<thead>
+						<tr style="height: 34px;">
+							<td style="width: 264px;">名称</td>
+							<td style="width: 158px;border-left: #fff solid 1px;border-right: #fff solid 1px;">领取道具</td>
+							<td style="width: 258px;">分解为钥匙</td>
+						</tr>
+					</thead>
+					<tbody id="milo-lotteryRecordContainer2">
+					</tbody>
+				</table>
+				<div class="alert3-listbtm"></div>
+			</div>
+			<!-- 分页 -->
+			<div class="t1-pagenation milo-paginator">
+				<!-- <div class="my-page-prev my-page-forbid">&lt;</div> -->
+				<ul class="my-page-group" id="paginationList2">
+					<!-- Pagination items will be dynamically added here -->
+				</ul>
+				<!-- <div class="my-page-next my-page-forbid" style="display: none;">&gt;</div> -->
+			</div>
+			<div class="table table2">
+				<table>
+					<thead>
+						<tr style="height: 34px;">
+							<td style="width: 344px;border-right: #fff solid 1px;">名称</td>
+							<td style="width: 337px;">分解所获钥匙</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>M4A1-雷神-巅峰荣耀皮肤</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>QBZ03-巅峰荣耀</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>幻神-冠军之幻</td>
+							<td>16</td>
+						</tr>
+						<tr>
+							<td>黑龙-冠军之武</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>龙啸-冠军之啸</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>迷你深渊冰龙-王绿豆</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>雷神-R.LGD-CFPLS18冠军</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>毁灭-孙三炮</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>十支战队击杀图标任选</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="alert3-listbtm"></div>
+			</div>
+			<!--    <div class="t2-pagenation t1-pagenation">-->
+			<!--        <span><a href="javascript:;">上一页</a></span>-->
+			<!--        <span>1</span>/<span>1</span>-->
+			<!--        <span><a href="javascript:;">下一页</a></span>-->
+			<!--    </div>-->
+		</div>
+		<!--暂存箱end-->
+
+
+		<!--中奖记录start 单抽-->
+		<div class="alert8" id="popdc">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog();"></a>
+			<p class="text1">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<div class="table">
+				<div class="tableBtm">
+					<div class="t1-pagenation">
+						<span id="jlname">xxxxxxx</span>
+					</div>
+				</div>
+				<div class="alert3-listbtm"></div>
+			</div>
+			<div class="text2">温馨提示:1.虚拟道具奖品将在24小时内发到您的游戏仓库。<br>谢谢您的理解与支持.由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。
+			</div>
+		</div>
+		<!--中奖记录end-->
+
+		<!--中奖记录start 10连-->
+		<div class="alert9" id="popJl">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog();"></a>
+			<p class="text1">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<div class="table record">
+				<table style="width: 100%;">
+					<tbody id="choulist">
+					</tbody>
+				</table>
+				<div class="alert3-listbtm"></div>
+			</div>
+			<div class="text2">温馨提示:1.虚拟道具奖品将在24小时内发到您的游戏仓库。<br>谢谢您的理解与支持.由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。
+			</div>
+		</div>
+		<!--中奖记录end-->
+
+		<!--概率表start-->
+		<div class="alert7" id="pop-gl">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog();"></a>
+			<div class="table">
+				<table>
+					<thead>
+						<tr style="height: 34px;">
+							<td style="width: 442px;border-right: #fff solid 1px;">道具名</td>
+							<td style="width: 258px;">概率</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>M4A1-雷神-巅峰荣耀皮肤</td>
+							<td>0.15%</td>
+						</tr>
+						<tr>
+							<td>QBZ03-巅峰荣耀</td>
+							<td>0.15%</td>
+						</tr>
+						<tr>
+							<td>幻神-冠军之幻</td>
+							<td>0.10%</td>
+						</tr>
+						<tr>
+							<td>黑龙-冠军之武</td>
+							<td>0.25%</td>
+						</tr>
+						<tr>
+							<td>龙啸-冠军之啸</td>
+							<td>0.30%</td>
+						</tr>
+						<tr>
+							<td>迷你深渊冰龙-王绿豆</td>
+							<td>0.25%</td>
+						</tr>
+						<tr>
+							<td>雷神-R.LGD-CFPLS18冠军</td>
+							<td>0.35%</td>
+						</tr>
+						<tr>
+							<td>毁灭-孙三炮</td>
+							<td>0.50%</td>
+						</tr>
+						<tr>
+							<td>十支战队击杀图标任选</td>
+							<td>0.95%</td>
+						</tr>
+						<tr>
+							<td>2000经验值</td>
+							<td>0.50%</td>
+						</tr>
+						<tr>
+							<td>1000经验值</td>
+							<td>1.00%</td>
+						</tr>
+						<tr>
+							<td>500经验值</td>
+							<td>7.00%</td>
+						</tr>
+						<tr>
+							<td>200经验值</td>
+							<td>46.00%</td>
+						</tr>
+						<tr>
+							<td>100经验值</td>
+							<td>42.50%</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="alert3-listbtm"></div>
+			</div>
+		</div>
+		<!--概率表end-->
+
+		<!--抽奖-击杀图标自选10选1 start-->
+		<div class="alert5 alert5-bg" id="popSelect10">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog()"></a>
+			<div class="table">
+				<!--        ag-->
+				<a class="alert5-item-btn" href="javascript:;" item="1">
+					<span class="alert5-item-1"></span>
+				</a>
+				<!--        edg-->
+				<a class="alert5-item-btn" href="javascript:;" item="7">
+					<span class="alert5-item-2"></span>
+				</a>
+				<!--        estar-->
+				<a class="alert5-item-btn" href="javascript:;" item="10">
+					<span class="alert5-item-3"></span>
+				</a>
+				<!--        kz-->
+				<a class="alert5-item-btn" href="javascript:;" item="3">
+					<span class="alert5-item-4"></span>
+				</a>
+				<!--        lgd-->
+				<a class="alert5-item-btn" href="javascript:;" item="5">
+					<span class="alert5-item-5"></span>
+				</a>
+				<!--        we-->
+				<a class="alert5-item-btn" href="javascript:;" item="6">
+					<span class="alert5-item-6"></span>
+				</a>
+				<!--        bs-->
+				<a class="alert5-item-btn" href="javascript:;" item="2">
+					<span class="alert5-item-7"></span>
+				</a>
+				<!--        qj-->
+				<a class="alert5-item-btn" href="javascript:;" item="4">
+					<span class="alert5-item-8"></span>
+				</a>
+				<!--        ep-->
+				<a class="alert5-item-btn" href="javascript:;" item="8">
+					<span class="alert5-item-9"></span>
+				</a>
+				<!--        xrock-->
+				<a class="alert5-item-btn" href="javascript:;" item="9">
+					<span class="alert5-item-10"></span>
+				</a>
+			</div>
+			<a class="alert5-btn" href="javascript:amsSelect();"></a>
+		</div>
+		<!--击杀图标兑换10选1 end-->
+
+		<!--兑换击杀图标兑换10选1 start-->
+		<div class="alert5 alert5-bg" id="popExchange10">
+			<div class="marginLine"></div>
+			<a class="alert-close" href="javascript:closeDialog()"></a>
+			<div class="table">
+				<!--        ag-->
+				<a class="alert5-item-btn" href="javascript:;" item="1">
+					<span class="alert5-item-1"></span>
+				</a>
+				<!--        edg-->
+				<a class="alert5-item-btn" href="javascript:;" item="7">
+					<span class="alert5-item-2"></span>
+				</a>
+				<!--        estar-->
+				<a class="alert5-item-btn" href="javascript:;" item="10">
+					<span class="alert5-item-3"></span>
+				</a>
+				<!--        kz-->
+				<a class="alert5-item-btn" href="javascript:;" item="3">
+					<span class="alert5-item-4"></span>
+				</a>
+				<!--        lgd-->
+				<a class="alert5-item-btn" href="javascript:;" item="5">
+					<span class="alert5-item-5"></span>
+				</a>
+				<!--        we-->
+				<a class="alert5-item-btn" href="javascript:;" item="6">
+					<span class="alert5-item-6"></span>
+				</a>
+				<!--        bs-->
+				<a class="alert5-item-btn" href="javascript:;" item="2">
+					<span class="alert5-item-7"></span>
+				</a>
+				<!--        qj-->
+				<a class="alert5-item-btn" href="javascript:;" item="4">
+					<span class="alert5-item-8"></span>
+				</a>
+				<!--        ep-->
+				<a class="alert5-item-btn" href="javascript:;" item="8">
+					<span class="alert5-item-9"></span>
+				</a>
+				<!--        xrock-->
+				<a class="alert5-item-btn" href="javascript:;" item="9">
+					<span class="alert5-item-10"></span>
+				</a>
+			</div>
+			<a class="alert5-btn" href="javascript:amsExchange10();"></a>
+		</div>
+		<!--击杀图标兑换10选1 end-->
+
+		<div id="mask"
+			style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;background: rgba(0, 0, 0, .4);">
+			<div id="payDialog" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%,-40%);">
+				<div class="midas_minipay_dialog_header">
+					<div class="header-icon-first" style="display: none;"><i
+							class="midas_minipay_dialog_icon midas_minipay_dialog_icon_i midas_minipay_dialog_icon_back"></i>&nbsp;
+					</div>
+					<div class="cp-header-title" style="line-height: 39px;">订单支付</div>
+				</div>
+				<div class="midas_minipay_dialog_content" style="padding-bottom:20px;background: #fff">
+					<div class="prop" style="padding-top: 25px;padding-bottom: 25px">
+						<div class="prop-detail">
+							<div class="prop-info">
+								<p class="prop-title">支付订单</p>
+								<!--ms-if-->
+								<p class="unit" style="display: none;">
+									单价：<span>0</span>元
+								</p>
+								<div></div>
+							</div>
+							<div class="prop-price">
+								<div><em id="amount">xxx</em>元</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-area" style="min-height:100px;" avalonctrl="channel">
+						<div class="pay-area-header" id="channelSelectWrap"
+							style="position: relative;*zoom:1;min-height: 60px;">
+							<h3 class="pay-title" style="margin-bottom: 10px;">
+								<span>支付方式：</span>
+							</h3>
+							<div class="channels">
+								<div class="channel checked">
+									<span>微信支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>QQ钱包</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>Q币支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel" data-track="channel">
+									<span>更多方式</span>
+									<i class="icon-more-arrow"></i>
+									<i class="icon-corner-checked"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right;margin-top: 80px;margin-right: 30px;">
+						<a class="btn btn-default" style="margin-right: 20px;" href="javascript:;"
+							onclick="confirmPay()">确认支付</a>
+						<a class="btn btn-danger" href="javascript:;" onclick="cancelPay()">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loader_layer">
+			<div id="loading-con">
+				<span class="loading-con--icon" style=""><img src="static/images/loading.png"></span>
+				<p>数据读取中</p>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/milo.js"></script>
+	<script src="static/js/swiper-bundle.min.js"></script>
+	<script src="static/js/public.js"></script>
+	<script src="static/js/index.js"></script>
+	<script>
+		var sideControl = 1;
+		$(window).load(function() {
+			var scrollTop = $(window).scrollTop();
+			if (sideControl == 1) {
+				if (scrollTop < 1000) {
+					$('.side').css('display', 'none')
+				} else {
+					$('.side').css('display', 'block')
+				}
+			}
+
+			if (scrollTop < 1000) {
+				$(".anchor-fixedbar").hide();
+			}
+
+		})
+
+		$('.side .alert-close').click(function() {
+			$('.side').css('display', 'none')
+			sideControl = 0
+		})
+
+
+		$(window).scroll(function() {
+			var score = $(window).scrollTop();
+			if (sideControl == 1) {
+				if (score < 1000) {
+					$('.side').css('display', 'none')
+				} else {
+					$('.side').css('display', 'block')
+				}
+			}
+
+			if (typeof DJC_ANCHOR != 'undefined' && typeof DJC_ANCHOR.oBaseInfo != 'undefined' &&
+				typeof DJC_ANCHOR.oBaseInfo.data != 'undefined' && typeof DJC_ANCHOR.oBaseInfo.data
+				._is_anchor != 'undefined') {
+				if (DJC_ANCHOR.oBaseInfo.data._is_anchor) {
+					var dom = $(".anchor-fixedbar2")
+				} else {
+					var dom = $(".anchor-fixedbar1")
+				}
+			}
+			if (score < 800) {
+				if (typeof dom != 'undefined') {
+					dom.css('display', 'none')
+				}
+			} else {
+				if (typeof dom != 'undefined') {
+					dom.css('display', 'block')
+				}
+			}
+		})
+	</script>
+</html>
