@@ -25,11 +25,12 @@
 
 
 ### 📃 Recent
-- [枪娘](https://hdjxtc.github.io/lottery/qiang_niang/) &emsp; 			📌 2024.1.2 00:00:00—2024.1.29 23:59:59；
-- [影豹](https://hdjxtc.github.io/lottery/ying_bao/) &emsp; 			📌 2024.1.5 00:00:00—2024.2.29 23:59:59；
+- [枪娘](https://hdjxtc.github.io/lottery/qiang_niang/) &emsp; 				📌 2024.1.2 00:00:00—2024.1.29 23:59:59；
+- [影豹](https://hdjxtc.github.io/lottery/ying_bao/) &emsp; 					📌 2024.1.5 00:00:00—2024.2.29 23:59:59；
 - [幻神](https://hdjxtc.github.io/lottery/huang_shen/) &emsp; 				📌 2024.1.12 00:00:00—2024.2.10 23:59:59；
-- [幸运星](https://hdjxtc.github.io/lottery/xing_yun_xing/) &emsp; 		📌 2024.1.23 00:00:00 —2024.2.29 23:59:59；
+- [幸运星](https://hdjxtc.github.io/lottery/xing_yun_xing/) &emsp; 			📌 2024.1.23 00:00:00 —2024.2.29 23:59:59；
 - [通行证](https://hdjxtc.github.io/lottery/tong_xing_zheng/) &emsp; 		📌 2024.1.26 00:00:00—2024.4.30 23:59:59；
+- [神启灵眸](https://hdjxtc.github.io/lottery/ling_mou/) &emsp;   			📌 2024.00.00 00:00:00—2024.00.00 23:59:59；
 
 &nbsp;&nbsp;&nbsp;
 ### 在使用前，请务必详细阅读以下内容，以确保您充分理解网站的使用条件和责任限制：
