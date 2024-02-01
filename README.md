@@ -2,7 +2,7 @@
 	<div>
 		<a href="https://blog.sunguoqi.com/">
 			<!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=console.log(%22Hello%2C%20World%22);&center=true&size=27" /> -->
-			<img src="https://hdjxtc.github.io/static/group.png" />
+			<img src="https://hdjxtc.github.io/static/group.jpg" />
 		</a>
 	</div>
 	<picture>
