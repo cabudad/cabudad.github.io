@@ -71,7 +71,6 @@ a{transition: filter .3s;}
 .box3 li:nth-child(2){width: 404px;}
 .box3 li:nth-child(3){width: 352px;}
 .btn_gm1{background-position: -1px -1511px;width: 430px;height: 104px;display: block;margin: 78px auto 0;}
-.btn_gm1.cur{background-position: -6px -1510px;}
 .txt4{font-size: 18px;color: #7b3907;text-align: center;line-height: 24px;}
 .txt7{font-size: 21px;color: #7e4a2e;text-align: center;line-height: 36px;margin-top: 92px;}
 .txt16{font-size: 18px;color: #7e4a2e;text-align: center;line-height: 26px;margin-top: 12px;}
