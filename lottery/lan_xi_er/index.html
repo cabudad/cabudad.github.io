@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="Tencent-CP" name="author" />
+		<meta content="Tencent" name="Copyright" />
+		<meta content="模拟器" name="Description">
+		<meta content="模拟器" name="Keywords">
+		<title>岚兮儿</title>
+		<link rel="icon" href="https://hdjxtc.github.io/static/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	</head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CB96DLY0FQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-CB96DLY0FQ');
+	</script>
+	<body class="wrap wrap2">
+		<div class="header">
+			<video src="//game.gtimg.cn/images/actdaoju/act/a20240105odds/tab2/headvedio.mp4" autoplay="" muted="" loop
+				class="headvedio"></video>
+		</div>
+		<div class="content">
+			<div class="login">
+				<div id="logined">
+					欢迎您，<span id="userinfo">大聪明</span>
+					<span id="ams_user_headimg"></span>
+					<a href="javascript:amsHistoryList(1)">【礼包记录】</a>
+					<a href="javascript:window.confirm('是否确定清除？',()=>{localStorage.removeItem('record_lanXiEr');window.alert('清除成功',()=>location.reload());},null,null);"
+						style="color:#f90000" title="清除统计数据">清除统计数据</a>
+				</div>
+			</div>
+			<div id="section">
+				<div>
+					<div class="part tab2" data-tabc='2'>
+						<div class="lottery-box mid">
+							<div class="lottery-data">
+								<div class="lottery-data-item">
+									<div class="lottery-data-box">
+										<a href="javascript: payClick(10);" class="tb2-btn3 commbtn1s  flex">点击购买<span
+												class="lottery-data-txt">CF
+												1个复活币</span></a>
+										<p class="write">附赠1张CF抽奖券</p>
+									</div>
+								</div>
+								<div class="lottery-data-item">
+									<div class="lottery-data-box">
+										<a href="javascript: payClick(100);" class="tb2-btn3 commbtn1s  flex">点击购买<span
+												class="lottery-data-txt">CF
+												10个复活币</span></a>
+										<p class="write">附赠11张CF抽奖券</p>
+									</div>
+								</div>
+							</div>
+							<div class="tb2-kuang1" style="display: block">
+								<div class="flex hadprize">
+									<p class="lottery-number lottery-numberBg flex">您当前有: <span class="jf_2452" id="keyNumber">X</span> 张CF抽奖券</p>
+									<a href="javascript:;" class="lottery-record">共花费<span id="amountMN">xxx</span></a>
+								</div>
+								<div class="lottery-cont lo1">
+
+									<div class="lottery-max-item lm1">
+										<img src="static/picture/max1.png" />
+									</div>
+									<div class="lottery-max-item lm2">
+										<img src="static/picture/max2.png" />
+									</div>
+									<div class="lottery-max-item lm3">
+										<img src="static/picture/max3.png" />
+									</div>
+									<div class="lottery-max-item lm4">
+										<img src="static/picture/max4.png" />
+									</div>
+									<div class="lottery-max-item lm5">
+										<img src="static/picture/max5.png" />
+									</div>
+									<div class="lottery-max-item lm6">
+										<img src="static/picture/max6.png" />
+									</div>
+									<div class="lottery-max-item lm7">
+										<img src="static/picture/max7.png" />
+									</div>
+									<div class="lottery-max-item lm8">
+										<img src="static/picture/max8.png" />
+									</div>
+									<!-- <div class="lottery-max-item lm9">
+                                    <img src="static/picture/max9.png" />
+                                </div>
+                                <div class="lottery-max-item lm10">
+                                    <img src="static/picture/max10.png" />
+                                </div> -->
+								</div>
+								<div class="lottery-info flex">
+									<div class="flex">
+										<a href="javascript:lottery(1);" class="tb2-btn4 flex">点击抽1次</a>
+										<a href="javascript:lottery(10);" class="tb2-btn4 flex">点击抽10次</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- CF S-->
+							<div class="lottery-bottom flex">
+								<div class="lottery-check">
+									<p>1.虚拟道具奖品将在24小时内发到游戏内；</p>
+									<p>2.可分解奖品将发到暂存箱进行领取或分解（具体可点击暂存箱查看）</p>
+									<a id="zcx" href="javascript:amsHistoryList(2);" class="tb2-btn5 commbtn1s flex">点击查看</a>
+								</div>
+								<div class="lottery-list">
+									<div id="broadcastcf1" class="lottery-scroll">
+										<ul id="broadcastcf2">
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="integral-box mid">
+							<h6 class="title tit3">积分兑换</h6>
+							<div class="title-desc flex">玩家可通过获取的积分，兑换奖励</div>
+							<p id="dhcf" class="integral-number lottery-numberBg flex">您当前有: <span
+									class="jf_2454" id="integral">X</span>
+								积分</p>
+							<div class="title-desc flex">岚兮儿，甜心偶像等唯一性道具，可以重复兑换，但同大区重复兑换无法到账，请谨慎操作</div>
+							<!-- CF S-->
+							<div class="integral" style="display: block">
+								<ul class="integral-item flex cfnone">
+									<li>
+										<p class="jfBg">1200积分</p>
+										<img src="static/picture/img23.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(1);" class="btn1  flex dhlimit2">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">1200积分</p>
+										<img src="static/picture/img8.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(2);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">800积分</p>
+										<img src="static/picture/img9.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(3);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">800积分</p>
+										<img src="static/picture/img10.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(4);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">600积分</p>
+										<img src="static/picture/img11.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(5);" class="btn1  flex dhlimit3">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">600积分</p>
+										<img src="static/picture/img12.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(6);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">400积分</p>
+										<img src="static/picture/img13.png" />
+										<p class="cq"></p>
+										<a href="javascript:amsExchange(7);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">400积分</p>
+										<img src="static/picture/img14.png" />
+										<a href="javascript:amsExchange(8);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">200积分</p>
+										<img src="static/picture/img15.png" />
+										<a href="javascript:amsExchange(9);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">25积分</p>
+										<img src="static/picture/img16.png" />
+										<a href="javascript:amsExchange(10);" class="btn1  flex">点击兑换</a>
+									</li>
+									<li>
+										<p class="jfBg">5积分</p>
+										<img src="static/picture/img17.png" />
+										<a href="javascript:amsExchange(11);" class="btn1  flex">点击兑换</a>
+									</li>
+								</ul>
+							</div>
+							<!-- CF E-->
+						</div>
+						<div class="rule-box mid">
+							<h6 class="title tit4">活动规则</h6>
+							<ul class="rule">
+								<li>活动时间：<span>2024年2月6日17点前~3月31日23点59分59秒结束</span>（具体开始时间可能会因网络、技术等原因推迟，实际开放时间会及时在页面告知）
+								</li>
+								<li>抽奖暂存箱：CF道具中，王者之石将直接发送至个人游戏仓库，其余道具都将发送至暂存箱；
+								</li>
+								<li>积分兑换：通过抽奖或暂存箱分解可获得积分，可使用积分兑换CF的道具，兑换的道具将直接发送至游戏内</li>
+								<li>本活动公示；<a
+										href="javascript:TGDialogS('dia-probability1');"><span>概率</span></a>是在大样本(大量用户)下的统计数值，个体用户的少量数据之间存在一定差异；
+								</li>
+								<li>暂存箱内道具如在活动结束时未进行领取或分解操作，系统将自动发放对应道具至游戏仓库内，岚兮儿，甜心偶像等唯一性道具，可以重复兑换，但同大区重复兑换无法到账，请谨慎操作
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- cf暂存箱 -->
+		<div class="dia dia-zcx" id="showMyGiftContentCf2">
+			<div class="dia-zc-box">
+				<div class="content-box">
+					<div class="zcx-box">
+						<div class="dia-zcx-tit tit"></div>
+						<div class="dia-zcx-bg">
+							<table class="tab table_bor">
+								<thead>
+									<tr>
+										<th>名称</th>
+										<th>领取道具</th>
+										<th>分解</th>
+									</tr>
+								</thead>
+								<tbody id="milo-lotteryRecordContainerCf2">
+									<!-- <tr>
+                                    <td>这是道具名称啊</td>
+                                    <td>领取道具</td>
+                                    <td>领取道具</td>
+                                </tr>
+                                <tr>
+                                    <td>这是道具名称啊</td>
+                                    <td>领取道具</td>
+                                    <td>领取道具</td>
+                                </tr>
+                                <tr>
+                                    <td>这是道具名称啊</td>
+                                    <td>领取道具</td>
+                                    <td>领取道具</td>
+                                </tr> -->
+								</tbody>
+							</table>
+						</div>
+						<!-- <div class="page bxfy">
+							<span><em class="now_page">1</em> / <em class="total_page">1</em></span>
+							<a href="javascript:;" class="pre">上一页</a> /
+							<a href="javascript:;" class="next">下一页</a>
+						</div> -->
+						<!-- 分页 -->
+						<div class="page_box milo-paginator">
+							<!-- <div class="my-page-prev my-page-forbid">&lt;</div> -->
+							<ul class="my-page-group" id="paginationList2">
+								<!-- Pagination items will be dynamically added here -->
+							</ul>
+							<!-- <div class="my-page-next my-page-forbid" style="display: none;">&gt;</div> -->
+						</div>
+					</div>
+					<div class="fjb-box">
+						<div class="dia-fjb-tit tit"></div>
+						<div class="dia-fjb-bg">
+							<div class="dia-fjb-head">
+								<span>道具名称</span>
+								<span>分解所获抽奖券</span>
+							</div>
+							<ul>
+								<li>
+									<span>岚兮儿</span>
+									<span>12</span>
+								</li>
+								<li>
+									<span>非觉醒版 王者玉锋</span>
+									<span>12</span>
+								</li>
+								<li>
+									<span>雷神-脉冲核心 皮肤</span>
+									<span>8</span>
+								</li>
+								<li>
+									<span>火麒麟-大唐荣光 皮肤</span>
+									<span>8</span>
+								</li>
+								<li>
+									<span>甜心偶像</span>
+									<span>6</span>
+								</li>
+								<li>
+									<span>炫金千变</span>
+									<span>6</span>
+								</li>
+								<li>
+									<span>M4A1-雷神</span>
+									<span>4</span>
+								</li>
+								<li>
+									<span>AK47-火麒麟</span>
+									<span>4</span>
+								</li>
+								<li>
+									<span>运动护目镜</span>
+									<span>2</span>
+								</li>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="javascript:closeDialog();" class="dia-close" title="关闭"></a>
+		</div>
+		<!-- cf获奖记录 -->
+		<div class="dia dia-record" id="showMyGiftContentCf1">
+			<div class="dia-record-box">
+				<div class="content-box">
+					<div class="zcx-box">
+						<div class="dia-hj tit"></div>
+						<div class="dia-record-bg">
+							<table class="tab table_bor">
+								<thead>
+									<tr>
+										<th>时间</th>
+										<th>领取道具</th>
+									</tr>
+								</thead>
+								<tbody id="milo-lotteryRecordContainerCf1">
+									<!-- <tr>
+                                    <td>2023-11-1124546</td>
+                                    <td>88888888888888</td>
+                                </tr> -->
+
+								</tbody>
+							</table>
+						</div>
+						<!-- <div class="page bxfy">
+							<span><em class="now_page">1</em> / <em class="total_page">1</em></span>
+							<a href="javascript:;" class="pre">上一页</a> /
+							<a href="javascript:;" class="next">下一页</a>
+						</div> -->
+						<!-- 分页 -->
+						<div class="page_box milo-paginator">
+							<ul class="my-page-group" id="paginationList">
+								<!-- Pagination items will be dynamically added here -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="javascript:closeDialog();" class="dia-close" title="关闭"></a>
+		</div>
+
+		<!-- cf cfhd奖池概率弹窗 -->
+		<div class="dia dia-probability1" id="dia-probability1">
+			<div class="dia-probability-box1">
+				<div class="dia-top-tab">
+					<a href="javascript:;" class="dia-nav-cf"></a>
+				</div>
+				<table class="probability-con2 probabilityCon">
+					<thead>
+						<tr>
+							<td>道具名</td>
+							<td>概率</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>岚兮儿</td>
+							<td>0.20%</td>
+						</tr>
+						<tr>
+							<td>非觉醒版 王者玉锋</td>
+							<td>0.20%</td>
+						</tr>
+						<tr>
+							<td>雷神-脉冲核心 皮肤</td>
+							<td>0.30%</td>
+						</tr>
+						<tr>
+							<td>火麒麟-大唐荣光 皮肤</td>
+							<td>0.30%</td>
+						</tr>
+						<tr>
+							<td>甜心偶像</td>
+							<td>0.40%</td>
+						</tr>
+						<tr>
+							<td>炫金千变</td>
+							<td>0.40%</td>
+						</tr>
+						<tr>
+							<td>M4A1-雷神</td>
+							<td>0.60%</td>
+						</tr>
+						<tr>
+							<td>AK47-火麒麟</td>
+							<td>0.60%</td>
+						</tr>
+						<tr>
+							<td>运动护目镜</td>
+							<td>1.20%</td>
+						</tr>
+						<tr>
+							<td>王者之石x1</td>
+							<td>14.00%</td>
+						</tr>
+						<tr>
+							<td>积分x100</td>
+							<td>0.20%</td>
+						</tr>
+						<tr>
+							<td>积分x50</td>
+							<td>1.60%</td>
+						</tr>
+						<tr>
+							<td>积分x20</td>
+							<td>10.00%</td>
+						</tr>
+						<tr>
+							<td>积分x10</td>
+							<td>40.00%</td>
+						</tr>
+						<tr>
+							<td>积分x5</td>
+							<td>30.00%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<a href="javascript:closeDialog();" class="dia-close3" title="关闭"></a>
+		</div>
+		<!-- 恭喜你获得以下道具  抽一次-->
+		<div class="dia lot1" id="lot1_price1">
+			<div class="dia-gxn-box">
+				<div class="tit lott-gxn-tit1"></div>
+				<div class="lot1-gnx-box">
+					<!-- 抽奖道具名称prop1-prop21.png -->
+					<img src="static/picture/prop1.png" alt="">
+
+				</div>
+			</div>
+			<a href="javascript:closeDialog();" class="dia-close" title="关闭"></a>
+		</div>
+		<!-- 恭喜你获得以下道具  抽十次-->
+		<div class="dia lot2" id="lot1_price10">
+			<div class="dia-gxn-box">
+				<div class="tit lott-gxn-tit2"></div>
+				<div class="lot1-gnx-box">
+					<!-- 抽奖道具名称prop1-prop21.png -->
+					<!-- <img src="static/picture/prop1.png" alt=""> -->
+				</div>
+			</div>
+			<a href="javascript:closeDialog();" class="dia-close" title="关闭"></a>
+		</div>
+		
+		<div id="mask" style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;background: rgba(0, 0, 0, .4);z-index: 2024;">
+			<div id="payDialog" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%,-40%);">
+				<div class="midas_minipay_dialog_header">
+					<div class="header-icon-first" style="display: none;"><i
+							class="midas_minipay_dialog_icon midas_minipay_dialog_icon_i midas_minipay_dialog_icon_back"></i>&nbsp;
+					</div>
+					<div class="cp-header-title" style="line-height: 39px;">订单支付</div>
+				</div>
+				<div class="midas_minipay_dialog_content" style="padding-bottom:20px;background: #fff">
+					<div class="prop" style="padding-top: 25px;padding-bottom: 25px">
+						<div class="prop-detail">
+							<div class="prop-info">
+								<p class="prop-title">支付订单</p>
+								<!--ms-if-->
+								<p class="unit" style="display: none;">
+									单价：<span>0</span>元
+								</p>
+								<div></div>
+							</div>
+							<div class="prop-price">
+								<div><em id="amount">xxx</em>元</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-area" style="min-height:100px;" avalonctrl="channel">
+						<div class="pay-area-header" id="channelSelectWrap"
+							style="position: relative;*zoom:1;min-height: 60px;">
+							<h3 class="pay-title" style="margin-bottom: 10px;">
+								<span>支付方式：</span>
+							</h3>
+							<div class="channels">
+								<div class="channel checked">
+									<span>微信支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>QQ钱包</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>Q币支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel" data-track="channel">
+									<span>更多方式</span>
+									<i class="icon-more-arrow"></i>
+									<i class="icon-corner-checked"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right;margin-top: 80px;margin-right: 30px;">
+						<a class="btn btn-default" style="margin-right: 20px;" href="javascript:;" onclick="confirmPay()">确认支付</a>
+						<a class="btn btn-danger" href="javascript:;" onclick="cancelPay()">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loader_layer">
+			<div id="loading-con">
+				<span class="loading-con--icon" style=""><img src="https://hdjxtc.github.io/static/loading.png"></span>
+				<p>数据读取中</p>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/milo.js"></script>
+	<script src="static/js/comm.js"></script>
+	<script src="static/js/index.js"></script>
+</html>
