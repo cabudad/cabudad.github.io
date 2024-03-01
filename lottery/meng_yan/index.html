@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="Tencent-CP" name="author" />
+		<meta content="Tencent" name="Copyright" />
+		<meta content="模拟器" name="Description">
+		<meta content="模拟器" name="Keywords">
+		<title>传说梦魇</title>
+		<link rel="icon" href="https://hdjxtc.github.io/static/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	</head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CB96DLY0FQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-CB96DLY0FQ');
+	</script>
+	<body>
+		<!--按钮灰质加grey-->
+		<div class="wrap">
+			<div class="container">
+				<div class="head pr">
+					<div class="logins">
+						<div id="logined" style="display: block;">
+							欢迎您，<span id="userinfo">大聪明</span>
+							<a href="javascript:amsHistoryList(1);">【礼包记录】</a>
+							<a href="javascript:window.confirm('是否确定清除？',()=>{localStorage.removeItem('record_MengYan');window.alert('清除成功',()=>location.reload());},null,null);"
+								style="color:#f90000" title="清除统计数据">清除统计数据</a>
+						</div>
+					</div>
+				</div>
+				<div class="par mao" id="mk1">
+					<div class="area c">
+						<a class="btn_buy1 sp ams_btn_buy" href="javascript:payClick(10);">10Q币购买1个复活币</a>
+						<a class="btn_buy2 sp ams_btn_buy" href="javascript:payClick(100);">100Q币购买10个复活币</a>
+						<a class="btn_buy3 sp ams_btn_buy" href="javascript:payClick(10);">100Q币购买10个复活币<strong>道聚城通用代金券最多抵扣9Q币</strong></a>
+						<a class="btn_buy4 sp ams_btn_buy" href="javascript:payClick(100);">100Q币购买10个复活币<strong>道聚城通用代金券最多抵扣<em>90QB</em></strong></a>
+					</div>
+					<div class="lottery pr">
+						<div class="lottery1"></div>
+						<a class="btn_box" href="javascript:;">
+							<img class="pop_s" height="209" src="static/picture/pop_s.png" width="516" /></a>
+						<div class="lotxtx">
+							<div class="djqbox c">
+								<p class="ltxt" style="width: 100%;">共花费：<span class="jf_2327" id="amountMN">xxx</span></p>
+							</div>
+							<a class="btn_cj1 chou chou1" href="javascript:lottery(1);">抽一次</a>
+							<a class="btn_cj10 chou chou10" href="javascript:lottery(10);">抽十次</a>
+							<p class="ptxtw sp">剩余钥匙：<span class="jf_2606" id="keyNumber">xxx</span><br /></p>
+						</div>
+					</div>
+					<div class="boxmain c">
+						<div class="box_c">
+							<h3 class="btit sp">暂存箱</h3>
+							<img class="box_pic" src="static/picture/box_pic.png" />
+							<div class="ztxbox">
+								<p>抽奖获得的可分解道具进入暂存箱<br />其余道具直接发往游戏内</p>
+								<a class="btn_looks sp" href="javascript:amsHistoryList(2);"><span>点击查看暂存箱</span></a>
+							</div>
+						</div>
+						<div class="box_r">
+							<h3 class="btit sp">获奖名单</h3>
+							<div id="milo-broadcast" id="milo-broadcast">
+								<ul class="list_intr" id="milo-broadcast-container">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="par1 mao" id="mk2">
+					<h2 class="sp db">梦魇币兑换</h2>
+					<p class="p1txt">
+						1、每累计获得500梦魇币，将自动获得一张【传说梦魇随机序列号抽取券】幸运签<br />
+						2、每日18:00刷新中签状态，未中签的签码在活动期间内均有机会中签，每日【传说梦魇随机序列号抽取券】幸运签1万张<br />
+						3、消耗中签的幸运签和相应梦魇币可进行兑换<br />
+						4、累计幸运签数达20张，可消耗剩余幸运签以及相应梦魇币进行兑换（单Q限1）</p>
+					<div class="get-sign-btn">
+						<a class="btn_lucky" href="javascript:signList(1);">查看我的随机序列号抽取券幸运签</a>
+						<a class="btn_lucky" href="javascript:get_has_signed_list();">幸运签中签公示</a>
+					</div>
+					<div class="lucky">
+						<p>传说梦魇随机序列号抽取券每日限量中签:<span>10000</span></p>
+						<div class="c lbtn">
+							<a class="btn_dhw sp fl" href="javascript:;"><span>6888梦魇币+1张已中签幸运签</span></a>
+							<a class="btn_dhw sp fr" href="javascript:;"><span>6888梦魇币+20张未中签幸运签</span><em>（单Q限兑1次）</em></a>
+						</div>
+					</div>
+					<p class="lucktxt2">
+						<span>累计获得梦魇币：<em class="jf_2608" id="integral">xxx</em></span>
+						<span>剩余可使用梦魇币：<em class="jf_2607 variable">xxx</em></span>
+						<span>剩余未中签幸运签：<em class="_ret_luck_num variable2">xxx</em></span>
+						<span>剩余已中签幸运签：<em class="_ret_hasluck_num">0</em></span>
+					</p>
+					<ul class="list_prop c">
+						<li>
+							<img src="static/picture/prop_pic1.png" />
+							<p>传说梦魇 无序列号版</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(1);"><span>消耗4588梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic2.png" />
+							<p>Kar98K-星神</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(2);"><span>消耗1588梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic3.png" />
+							<p>鹰</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(3);"><span>消耗1688梦魇币兑换</span></a><!--按钮灰质加grey-->
+						</li>
+						<li>
+							<img src="static/picture/prop_pic4.png" />
+							<p>觉醒版 王者之光</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(4);"><span>消耗1188梦魇币兑换</span></a><!--按钮灰质加grey-->
+						</li>
+						<li>
+							<img src="static/picture/prop_pic5.png" />
+							<p>加特林-炼狱音效卡(不可交易)</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(5);"><span>消耗798梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic6.png" />
+							<p>加特林-炼狱</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(6);"><span>消耗598梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic7.png" />
+							<p>AA-12-雷霆</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(7);"><span>消耗398梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic8.png" />
+							<p>麒麟刺</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(8);"><span>消耗268梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic9.png" />
+							<p>白虎-蓝粉色光效(不可交易)</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(9);"><span>消耗178梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic10.png" />
+							<p>王者刀锋玩偶</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(10);"><span>消耗178梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic11.png" />
+							<p>属性变更券x5</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(11);"><span>消耗20梦魇币兑换</span></a>
+						</li>
+						<li>
+							<img src="static/picture/prop_pic12.png" />
+							<p>交易专用钥匙x1</p>
+							<a class="btn_dh sp" href="javascript:amsExchange(12);"><span>消耗4梦魇币兑换</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="par6 mao" id="mk7">
+					<h2 class="sp db">活动规则</h2>
+					<div class="rule">
+						<ul class="box4_list">
+							<li><i class="sp"></i>活动开始时间：2024.3.1；</li>
+							<li><i
+									class="sp"></i>抽奖：消耗钥匙进行单抽和十连抽，抽奖获得的可分解道具存放在【暂存箱】中，可选择分解成钥匙或发往游戏仓库，已经领取到仓库的道具无法退换，请慎重（在参与活动期间请确认好绑定的大区）；唯一性道具和角色（如：鹰等），可重复抽到，但在同一大区内，游戏仓库无法重复到账；
+							</li>
+							<li><i
+									class="sp"></i>兑换：玩家可以消耗获得的梦魇币进行道具兑换，兑换获得的道具直接发往游戏仓库，兑换会消耗对应梦魇币，兑换不限次数；唯一性道具和角色（如：鹰等），可重复兑换，但在同一大区内，游戏仓库无法重复到账；
+							</li>
+							<li><i class="sp"></i>本活动主奖池<a href="javascript:TGDialogS('popgl');"
+									style="color: red">道具概率公示</a>；本活动数字奖池<a href="javascript:TGDialogS('popgls');"
+									style="color: red">道具概率公示</a>；所用‘概率’均是在大样本(大量用户)下的统计数值，与单个玩家的少量测试数据之间可能会存在一定差异。
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 获奖记录start -->
+		<div class="pop pr pop-lbjl" id="showMyGiftContent1">
+			<div class="dia-con">
+				<table class="tab">
+					<thead>
+						<tr>
+							<th style="width: 30%">时间</th>
+							<th style="width: 30%">大区</th>
+							<th style="width: 40%">道具</th>
+						</tr>
+					</thead>
+					<tbody id="milo-lotteryRecordContainer1">
+					</tbody>
+				</table>
+				<!-- <div class="page milo-paginator" id="milo-paginator1">
+					           <span>1 / 1</span>
+					           <span>上一页</span> /
+					           <span>下一页</span>
+				</div> -->
+				<!-- 分页 -->
+				<div class="page_box milo-paginator">
+					<ul class="my-page-group" id="paginationList">
+						<!-- Pagination items will be dynamically added here -->
+					</ul>
+				</div>
+			</div>
+			<p class="tips">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持！</p>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!-- 获奖记录end -->
+
+		<!-- 暂存箱start -->
+		<div class="pop pr pop-zcx" id="showMyGiftContent2">
+			<div class="pop-zcx-box">
+				<div class="box-l">
+					<div class="scrobar">
+						<table class="tab">
+							<thead>
+								<tr>
+									<th width="50%">名称</th>
+									<th width="25%">领取道具</th>
+									<th width="25%">分解为钥匙</th>
+								</tr>
+							</thead>
+							<tbody id="milo-lotteryRecordContainer2">
+							</tbody>
+						</table>
+					</div>
+					<!-- <div class="page milo-paginator" id="milo-paginator2">
+						               <span>1 / 1</span>
+						               <span>上一页</span>
+						               <span>下一页</span>
+					</div> -->
+					<!-- 分页 -->
+					<div class="page_box milo-paginator">
+						<!-- <div class="my-page-prev my-page-forbid">&lt;</div> -->
+						<ul class="my-page-group" id="paginationList2">
+							<!-- Pagination items will be dynamically added here -->
+						</ul>
+						<!-- <div class="my-page-next my-page-forbid" style="display: none;">&gt;</div> -->
+					</div>
+				</div>
+				<div class="box-r">
+					<div class="scrobar">
+						<table class="tab">
+							<thead>
+								<tr>
+									<th width="50%">道具名称</th>
+									<th width="50%">分解所获钥匙</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>传说梦魇 无序列号版</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>Kar98K-星神</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td>鹰</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td>觉醒版 王者之光</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>加特林-炼狱音效卡（不可交易）</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>加特林-炼狱</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>AA-12-雷霆</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>麒麟刺</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>白虎-蓝粉色光效（不可交易）</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>王者刀锋玩偶</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<p class="tips">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持！</p>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--暂存箱end-->
+
+
+		<!--概率1start-->
+		<div class="pop pop-glgs pr" id="popgl">
+			<div class="pop-tab">
+				<a class="pop-nav sp on" href="javascript:;">主奖池</a>
+				<a class="pop-nav sp" href="javascript:;">梦魇宝箱</a>
+			</div>
+			<div class="tab-ct">
+				<div class="gl-pic gl-pic1"></div>
+				<div class="gl-pic gl-pic2" style="display: none;"></div>
+			</div>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--概率1end-->
+
+		<!--概率2数字奖池start-->
+		<div class="pop pop-glgs pop-glgs1 pr" id="popgls">
+			<div class="tab-ct">
+				<div class="gl-pic gl-pic3"></div>
+			</div>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--概率2end-->
+
+
+
+		<!--中奖记录start 单抽-->
+		<div class="pop5 pr" id="popdc" style="display: none;">
+			<p class="ptxt">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<ul class="list_jl">
+				<li id="jlname">xxxxxxx</li>
+			</ul>
+			<p class="ptxt1">温馨提示:虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持.由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。</p>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--中奖记录end-->
+
+
+		<!--中奖记录start 10连-->
+		<div class="pop4 pr" id="popJl">
+			<p class="ptxt">抽奖过程中请勿刷新页面或中断，请以实际礼包记录为准。</p>
+			<ul class="list_jl record" id="choulist">
+				<!-- <li>xxxxxxxxxxxxxx</li> -->
+			</ul>
+			<p class="ptxt1">温馨提示:虚拟道具奖品将在24小时内发到您的游戏仓库。谢谢您的理解与支持.由于数据量巨大，奖励道具显示将有所延迟，或可存在不展示的情况，请以礼包记录为准。</p>
+			<a class="close sp db" href="javascript:closeDialog();" title="关闭">×</a>
+		</div>
+		<!--中奖记录end-->
+
+		
+		<div id="mask" style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;background: rgba(0, 0, 0, .4);z-index: 2024;">
+			<div id="payDialog" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%,-40%);">
+				<div class="midas_minipay_dialog_header">
+					<div class="header-icon-first" style="display: none;"><i
+							class="midas_minipay_dialog_icon midas_minipay_dialog_icon_i midas_minipay_dialog_icon_back"></i>&nbsp;
+					</div>
+					<div class="cp-header-title" style="line-height: 39px;">订单支付</div>
+				</div>
+				<div class="midas_minipay_dialog_content" style="padding-bottom:20px;background: #fff">
+					<div class="prop" style="padding-top: 25px;padding-bottom: 25px">
+						<div class="prop-detail">
+							<div class="prop-info">
+								<p class="prop-title">支付订单</p>
+								<!--ms-if-->
+								<p class="unit" style="display: none;">
+									单价：<span>0</span>元
+								</p>
+								<div></div>
+							</div>
+							<div class="prop-price">
+								<div><em id="amount">xxx</em>元</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-area" style="min-height:100px;" avalonctrl="channel">
+						<div class="pay-area-header" id="channelSelectWrap"
+							style="position: relative;*zoom:1;min-height: 60px;">
+							<h3 class="pay-title" style="margin-bottom: 10px;">
+								<span>支付方式：</span>
+							</h3>
+							<div class="channels">
+								<div class="channel checked">
+									<span>微信支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>QQ钱包</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel">
+									<span>Q币支付</span>
+									<i class="icon-corner-checked"></i>
+								</div>
+								<div class="channel" data-track="channel">
+									<span>更多方式</span>
+									<i class="icon-more-arrow"></i>
+									<i class="icon-corner-checked"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right;margin-top: 80px;margin-right: 30px;">
+						<a class="btn btn-default" style="margin-right: 20px;" href="javascript:;" onclick="confirmPay()">确认支付</a>
+						<a class="btn btn-danger" href="javascript:;" onclick="cancelPay()">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loader_layer">
+			<div id="loading-con">
+				<span class="loading-con--icon" style=""><img src="https://hdjxtc.github.io/static/loading.png"></span>
+				<p>数据读取中</p>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/milo.js"></script>
+	<script src="static/js/public.js"></script>
+	<script src="static/js/index.js"></script>
+</html>
